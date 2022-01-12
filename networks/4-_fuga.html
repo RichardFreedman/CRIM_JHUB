@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 500px;
+            height: 500px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"group": "4-", "id": "4-", "label": "4-", "level": 1, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+", "label": "4-8+", "level": 2, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+4-", "label": "4-8+4-", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+4-5-", "label": "4-8+4-5-", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-1+", "label": "4-1+", "level": 2, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-1+1+", "label": "4-1+1+", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-", "label": "4-5-", "level": 2, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-", "label": "4-5-4-", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+", "label": "4-5-4-4+", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+", "label": "4-5-4-4+5+", "level": 5, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-", "label": "4-5-4-4+5+8-", "level": 6, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-5+", "label": "4-5-4-4+5+8-5+", "level": 7, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-5+8-", "label": "4-5-4-4+5+8-5+8-", "level": 8, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-5+8-5-", "label": "4-5-4-4+5+8-5+8-5-", "level": 9, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-5+8-5-4+", "label": "4-5-4-4+5+8-5+8-5-4+", "level": 10, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-5+8-5-4+5+", "label": "4-5-4-4+5+8-5+8-5-4+5+", "level": 11, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-5+8-5-4+5+8-", "label": "4-5-4-4+5+8-5+8-5-4+5+8-", "level": 12, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-5+", "label": "4-5-4-5+", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-12+", "label": "4-5-4-4+5+8-12+", "level": 7, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-12+8-", "label": "4-5-4-4+5+8-12+8-", "level": 8, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-12+8-5-", "label": "4-5-4-4+5+8-12+8-5-", "level": 9, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-12+8-5-4+", "label": "4-5-4-4+5+8-12+8-5-4+", "level": 10, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-4-4+5+8-12+8-5-4+4-", "label": "4-5-4-4+5+8-12+8-5-4+4-", "level": 11, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+", "label": "4-4+", "level": 2, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+5+", "label": "4-4+5+", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+5+5+", "label": "4-4+5+5+", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+5+5+4-", "label": "4-4+5+5+4-", "level": 5, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+5+5+4-3+", "label": "4-4+5+5+4-3+", "level": 6, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+5+5+4-3+4-", "label": "4-4+5+5+4-3+4-", "level": 7, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+4-4+", "label": "4-8+4-4+", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+4-4+5+", "label": "4-8+4-4+5+", "level": 5, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+5+", "label": "4-8+5+", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+5+8-", "label": "4-8+5+8-", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-7+", "label": "4-5-7+", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-7+7-", "label": "4-5-7+7-", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-7+7-7+", "label": "4-5-7+7-7+", "level": 5, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-7+7-7+3-", "label": "4-5-7+7-7+3-", "level": 6, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4-", "label": "4-4-", "level": 2, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+11-", "label": "4-4+11-", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+11-4+", "label": "4-4+11-4+", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+11-4+11+", "label": "4-4+11-4+11+", "level": 5, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+11-4+11+8-", "label": "4-4+11-4+11+8-", "level": 6, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+11-4+11+8-2-", "label": "4-4+11-4+11+8-2-", "level": 7, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+11-4+11+8-2-2+", "label": "4-4+11-4+11+8-2-2+", "level": 8, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+11-4+11+8-2-2+8+", "label": "4-4+11-4+11+8-2-2+8+", "level": 9, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-4+11-4+11+8-2-2+8+7-", "label": "4-4+11-4+11+8-2-2+8+7-", "level": 10, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5+", "label": "4-5+", "level": 2, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-1+5-", "label": "4-1+5-", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-8+", "label": "4-5-8+", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-8+5-", "label": "4-5-8+5-", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-1+8+", "label": "4-1+8+", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-1+8+12-", "label": "4-1+8+12-", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+5-", "label": "4-8+5-", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+5-4-", "label": "4-8+5-4-", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+5-4-5-", "label": "4-8+5-4-5-", "level": 5, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+5-4-5-8+", "label": "4-8+5-4-5-8+", "level": 6, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+5-4-5-8+8+", "label": "4-8+5-4-5-8+8+", "level": 7, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+5-4-5-8+8+8-", "label": "4-8+5-4-5-8+8+8-", "level": 8, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-8+5-4-5-8+8+8-1+", "label": "4-8+5-4-5-8+8+8-1+", "level": 9, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-12+", "label": "4-5-12+", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-12+5-", "label": "4-5-12+5-", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-1+", "label": "4-5-1+", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-1+2+", "label": "4-5-1+2+", "level": 4, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-1+2+1+", "label": "4-5-1+2+1+", "level": 5, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-5+", "label": "4-5-5+", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-12+", "label": "4-12+", "level": 2, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-1-", "label": "4-5-1-", "level": 3, "physics": false, "shape": "dot"}, {"group": "4-", "id": "4-5-1-8+", "label": "4-5-1-8+", "level": 4, "physics": false, "shape": "dot"}]);
+        edges = new vis.DataSet([{"arrows": "to", "from": "4-", "to": "4-8+"}, {"arrows": "to", "from": "4-8+", "to": "4-8+4-"}, {"arrows": "to", "from": "4-8+4-", "to": "4-8+4-5-"}, {"arrows": "to", "from": "4-", "to": "4-1+"}, {"arrows": "to", "from": "4-1+", "to": "4-1+1+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-4-"}, {"arrows": "to", "from": "4-5-4-", "to": "4-5-4-4+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-4-"}, {"arrows": "to", "from": "4-5-4-", "to": "4-5-4-4+"}, {"arrows": "to", "from": "4-5-4-4+", "to": "4-5-4-4+5+"}, {"arrows": "to", "from": "4-5-4-4+5+", "to": "4-5-4-4+5+8-"}, {"arrows": "to", "from": "4-5-4-4+5+8-", "to": "4-5-4-4+5+8-5+"}, {"arrows": "to", "from": "4-5-4-4+5+8-5+", "to": "4-5-4-4+5+8-5+8-"}, {"arrows": "to", "from": "4-5-4-4+5+8-5+8-", "to": "4-5-4-4+5+8-5+8-5-"}, {"arrows": "to", "from": "4-5-4-4+5+8-5+8-5-", "to": "4-5-4-4+5+8-5+8-5-4+"}, {"arrows": "to", "from": "4-5-4-4+5+8-5+8-5-4+", "to": "4-5-4-4+5+8-5+8-5-4+5+"}, {"arrows": "to", "from": "4-5-4-4+5+8-5+8-5-4+5+", "to": "4-5-4-4+5+8-5+8-5-4+5+8-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-4-"}, {"arrows": "to", "from": "4-5-4-", "to": "4-5-4-5+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-4-"}, {"arrows": "to", "from": "4-5-4-", "to": "4-5-4-4+"}, {"arrows": "to", "from": "4-5-4-4+", "to": "4-5-4-4+5+"}, {"arrows": "to", "from": "4-5-4-4+5+", "to": "4-5-4-4+5+8-"}, {"arrows": "to", "from": "4-5-4-4+5+8-", "to": "4-5-4-4+5+8-12+"}, {"arrows": "to", "from": "4-5-4-4+5+8-12+", "to": "4-5-4-4+5+8-12+8-"}, {"arrows": "to", "from": "4-5-4-4+5+8-12+8-", "to": "4-5-4-4+5+8-12+8-5-"}, {"arrows": "to", "from": "4-5-4-4+5+8-12+8-5-", "to": "4-5-4-4+5+8-12+8-5-4+"}, {"arrows": "to", "from": "4-5-4-4+5+8-12+8-5-4+", "to": "4-5-4-4+5+8-12+8-5-4+4-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-4-"}, {"arrows": "to", "from": "4-5-4-", "to": "4-5-4-4+"}, {"arrows": "to", "from": "4-", "to": "4-4+"}, {"arrows": "to", "from": "4-4+", "to": "4-4+5+"}, {"arrows": "to", "from": "4-4+5+", "to": "4-4+5+5+"}, {"arrows": "to", "from": "4-4+5+5+", "to": "4-4+5+5+4-"}, {"arrows": "to", "from": "4-4+5+5+4-", "to": "4-4+5+5+4-3+"}, {"arrows": "to", "from": "4-4+5+5+4-3+", "to": "4-4+5+5+4-3+4-"}, {"arrows": "to", "from": "4-", "to": "4-8+"}, {"arrows": "to", "from": "4-8+", "to": "4-8+4-"}, {"arrows": "to", "from": "4-8+4-", "to": "4-8+4-4+"}, {"arrows": "to", "from": "4-8+4-4+", "to": "4-8+4-4+5+"}, {"arrows": "to", "from": "4-", "to": "4-8+"}, {"arrows": "to", "from": "4-8+", "to": "4-8+5+"}, {"arrows": "to", "from": "4-8+5+", "to": "4-8+5+8-"}, {"arrows": "to", "from": "4-", "to": "4-4+"}, {"arrows": "to", "from": "4-4+", "to": "4-4+5+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-7+"}, {"arrows": "to", "from": "4-5-7+", "to": "4-5-7+7-"}, {"arrows": "to", "from": "4-5-7+7-", "to": "4-5-7+7-7+"}, {"arrows": "to", "from": "4-5-7+7-7+", "to": "4-5-7+7-7+3-"}, {"arrows": "to", "from": "4-", "to": "4-4-"}, {"arrows": "to", "from": "4-", "to": "4-4+"}, {"arrows": "to", "from": "4-", "to": "4-4+"}, {"arrows": "to", "from": "4-", "to": "4-8+"}, {"arrows": "to", "from": "4-", "to": "4-4+"}, {"arrows": "to", "from": "4-4+", "to": "4-4+11-"}, {"arrows": "to", "from": "4-4+11-", "to": "4-4+11-4+"}, {"arrows": "to", "from": "4-4+11-4+", "to": "4-4+11-4+11+"}, {"arrows": "to", "from": "4-4+11-4+11+", "to": "4-4+11-4+11+8-"}, {"arrows": "to", "from": "4-4+11-4+11+8-", "to": "4-4+11-4+11+8-2-"}, {"arrows": "to", "from": "4-4+11-4+11+8-2-", "to": "4-4+11-4+11+8-2-2+"}, {"arrows": "to", "from": "4-4+11-4+11+8-2-2+", "to": "4-4+11-4+11+8-2-2+8+"}, {"arrows": "to", "from": "4-4+11-4+11+8-2-2+8+", "to": "4-4+11-4+11+8-2-2+8+7-"}, {"arrows": "to", "from": "4-", "to": "4-8+"}, {"arrows": "to", "from": "4-", "to": "4-4+"}, {"arrows": "to", "from": "4-4+", "to": "4-4+5+"}, {"arrows": "to", "from": "4-4+5+", "to": "4-4+5+5+"}, {"arrows": "to", "from": "4-", "to": "4-5+"}, {"arrows": "to", "from": "4-", "to": "4-1+"}, {"arrows": "to", "from": "4-1+", "to": "4-1+5-"}, {"arrows": "to", "from": "4-", "to": "4-1+"}, {"arrows": "to", "from": "4-1+", "to": "4-1+5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-8+"}, {"arrows": "to", "from": "4-5-8+", "to": "4-5-8+5-"}, {"arrows": "to", "from": "4-", "to": "4-1+"}, {"arrows": "to", "from": "4-1+", "to": "4-1+8+"}, {"arrows": "to", "from": "4-1+8+", "to": "4-1+8+12-"}, {"arrows": "to", "from": "4-", "to": "4-8+"}, {"arrows": "to", "from": "4-8+", "to": "4-8+5-"}, {"arrows": "to", "from": "4-8+5-", "to": "4-8+5-4-"}, {"arrows": "to", "from": "4-8+5-4-", "to": "4-8+5-4-5-"}, {"arrows": "to", "from": "4-8+5-4-5-", "to": "4-8+5-4-5-8+"}, {"arrows": "to", "from": "4-8+5-4-5-8+", "to": "4-8+5-4-5-8+8+"}, {"arrows": "to", "from": "4-8+5-4-5-8+8+", "to": "4-8+5-4-5-8+8+8-"}, {"arrows": "to", "from": "4-8+5-4-5-8+8+8-", "to": "4-8+5-4-5-8+8+8-1+"}, {"arrows": "to", "from": "4-", "to": "4-1+"}, {"arrows": "to", "from": "4-1+", "to": "4-1+5-"}, {"arrows": "to", "from": "4-", "to": "4-1+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-12+"}, {"arrows": "to", "from": "4-5-12+", "to": "4-5-12+5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-12+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-1+"}, {"arrows": "to", "from": "4-5-1+", "to": "4-5-1+2+"}, {"arrows": "to", "from": "4-5-1+2+", "to": "4-5-1+2+1+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-5+"}, {"arrows": "to", "from": "4-", "to": "4-4+"}, {"arrows": "to", "from": "4-4+", "to": "4-4+5+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-8+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-1+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-12+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-12+"}, {"arrows": "to", "from": "4-5-12+", "to": "4-5-12+5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-12+"}, {"arrows": "to", "from": "4-", "to": "4-8+"}, {"arrows": "to", "from": "4-", "to": "4-8+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-5-", "to": "4-5-1-"}, {"arrows": "to", "from": "4-5-1-", "to": "4-5-1-8+"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-5-"}, {"arrows": "to", "from": "4-", "to": "4-12+"}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
