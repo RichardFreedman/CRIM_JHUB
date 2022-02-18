@@ -1,0 +1,116 @@
+,piece_title,pattern_matched,predicted_type,voice_list,measure_beat_list,time_intervals,entry_intervals,start_offset
+0,Quo abiit dilectus tuus,"(-2, 2, 2, 2)",Fuga,"['Superior', 'Contratenor', 'Bassus', 'Tenor', 'Bassus']","['1/3.0', '3/3.0', '8/4.0', '10/3.0', '12/3.0']",[16. 42. 14. 16.],"['P-5', 'M-6', 'M3', 'P-5']",4.0
+1,Quo abiit dilectus tuus,"(2, -2, -2, 2)",Fuga,"['Contratenor', 'Superior', 'Contratenor', 'Bassus', 'Contratenor', 'Tenor', 'Contratenor', 'Superior', 'Tenor']","['5/2.75', '6/1.0', '7/3.0', '8/1.0', '8/4.5', '15/1.0', '17/1.0', '18/3.0', '19/4.0']",[ 4.5 12.   4.   7.  49.  16.  12.  10. ],"['m3', 'd-5', 'A-4', 'M6', 'M-6', 'P5', 'P4', 'P-8']",35.5
+2,Quo abiit dilectus tuus,"(-3, 2, -2, -2)",Fuga,"['Superior', 'Contratenor', 'Bassus', 'Superior', 'Tenor', 'Bassus', 'Contratenor', 'Superior', 'Tenor']","['5/4.0', '7/2.0', '7/4.0', '10/4.0', '14/4.0', '16/2.0', '16/4.0', '18/2.0', '19/2.0']",[12.  4. 24. 32. 12.  4. 12.  8.],"['P-5', 'P-4', 'P8', 'P-8', 'P-5', 'M9', 'P4', 'P-8']",38.0
+3,Quo abiit dilectus tuus,"(-2, -2, 2, 2)",ID,"['Superior', 'Bassus', 'Tenor', 'Contratenor']","['6/2.0', '8/2.0', '15/2.0', '17/2.0']",[16. 56. 16.],"['P-8', 'P1', 'P5']",42.0
+4,Quo abiit dilectus tuus,"(-2, -2, -2, -2)",Fuga,"['Superior', 'Superior', 'Bassus', 'Bassus', 'Bassus', 'Bassus']","['8/3.0', '13/4.0', '17/4.0', '18/1.0', '22/1.0', '22/3.0']",[42. 32.  2. 32.  4.],"['m3', 'm-10', 'M-2', 'M-2', 'm-2']",60.0
+5,Quo abiit dilectus tuus,"(2, 2, -2, -2)",Fuga,"['Contratenor', 'Bassus', 'Bassus', 'Tenor', 'Superior']","['8/4.0', '10/4.0', '13/3.0', '16/1.0', '26/2.0']",[16. 22. 20. 82.],"['m-7', 'P1', 'M2', 'm9']",62.0
+6,Quo abiit dilectus tuus,"(2, 2, 2, -2)",Fuga,"['Bassus', 'Bassus']","['9/1.0', '13/2.0']",[34.],['M-3'],64.0
+7,Quo abiit dilectus tuus,"(-2, -2, -2, 2)",Fuga,"['Contratenor', 'Bassus', 'Bassus']","['10/2.0', '14/1.0', '18/2.0']",[30. 34.],"['P-8', 'P1']",74.0
+8,Quo abiit dilectus tuus,"(2, -2, -2, -2)",Fuga,"['Contratenor', 'Superior', 'Bassus', 'Tenor', 'Contratenor']","['13/2.0', '13/3.0', '13/4.0', '16/2.0', '32/4.5']",[  2.   2.  20. 133.],"['P5', 'P-12', 'm2', 'M6']",98.0
+9,Quo abiit dilectus tuus,"(-2, -2, 2, -5)",Fuga,"['Superior', 'Bassus']","['14/4.0', '18/4.0']",[32.],['m-9'],110.0
+10,Quo abiit dilectus tuus,"(3, -2, -2, -2)",Fuga,"['Contratenor', 'Superior', 'Bassus', 'Tenor', 'Contratenor']","['22/4.0', '24/2.0', '26/4.0', '28/2.0', '29/4.0']",[12. 20. 12. 12.],"['P5', 'P-12', 'P5', 'P5']",174.0
+11,Quo abiit dilectus tuus,"(-2, -2, -2, -3)",ID,"['Contratenor', 'Superior', 'Bassus', 'Tenor']","['23/1.0', '24/3.0', '27/1.0', '28/3.0']",[12. 20. 12.],"['P5', 'P-12', 'P5']",176.0
+12,Quo abiit dilectus tuus,"(-2, -2, -3, 1)",ID,"['Contratenor', 'Superior', 'Bassus', 'Tenor']","['23/2.0', '24/4.0', '27/2.0', '28/4.0']",[12. 20. 12.],"['P5', 'P-12', 'P5']",178.0
+13,Quo abiit dilectus tuus,"(-2, -3, 1, 2)",ID,"['Contratenor', 'Superior', 'Bassus', 'Tenor']","['23/3.0', '25/1.0', '27/3.0', '29/1.0']",[12. 20. 12.],"['P5', 'P-12', 'P5']",180.0
+14,Quo abiit dilectus tuus,"(-3, 1, 2, 2)",ID,"['Contratenor', 'Superior', 'Bassus', 'Tenor']","['24/1.0', '25/3.0', '28/1.0', '29/3.0']",[12. 20. 12.],"['P5', 'P-12', 'P5']",184.0
+15,Quo abiit dilectus tuus,"(1, 2, 2, 2)",ID,"['Contratenor', 'Superior', 'Bassus', 'Tenor', 'Superior', 'Tenor']","['24/2.0', '25/4.0', '28/2.0', '29/4.0', '31/2.0', '32/4.0']",[12. 20. 12. 12. 12.],"['P5', 'P-12', 'P5', 'm7', 'm-7']",186.0
+16,Quo abiit dilectus tuus,"(2, 2, 2, -2)",Fuga,"['Superior', 'Tenor']","['26/1.0', '30/1.0']",[32.],['P-8'],200.0
+17,Quo abiit dilectus tuus,"(2, 2, -2, 2)",Fuga,"['Contratenor', 'Tenor']","['26/4.0', '30/2.0']",[28.],['M-3'],206.0
+18,Quo abiit dilectus tuus,"(-2, -2, -2, -2)",Fuga,"['Contratenor', 'Bassus', 'Contratenor', 'Superior', 'Tenor', 'Tenor', 'Tenor']","['33/1.0', '35/4.0', '47/1.0', '53/3.0', '55/1.0', '62/2.0', '62/4.0']",[22. 90. 52. 12. 58.  4.],"['M-6', 'P5', 'P5', 'P-5', 'M-2', 'm-2']",256.0
+19,Quo abiit dilectus tuus,"(2, -3, 5, 1)",Fuga,"['Bassus', 'Superior', 'Contratenor', 'Tenor', 'Bassus', 'Tenor']","['34/2.0', '35/2.0', '36/2.0', '38/2.0', '40/2.0', '41/2.0']",[ 8.  8. 16. 16.  8.],"['P8', 'P-5', 'P-4', 'P-5', 'P8']",266.0
+20,Quo abiit dilectus tuus,"(-2, -2, 8, -2)",Fuga,"['Bassus', 'Tenor']","['41/4.0', '45/2.0']",[28.],['P4'],326.0
+21,Quo abiit dilectus tuus,"(-2, -2, -2, 2)",Fuga,"['Contratenor', 'Superior', 'Superior', 'Tenor', 'Contratenor', 'Superior', 'Contratenor', 'Bassus', 'Superior', 'Contratenor', 'Superior', 'Tenor', 'Bassus', 'Tenor', 'Contratenor', 'Superior', 'Contratenor', 'Bassus', 'Contratenor', 'Superior']","['42/4.0', '47/4.0', '53/4.0', '55/2.0', '58/1.0', '62/1.0', '66/4.0', '67/4.0', '68/2.0', '70/2.0', '70/4.0', '72/2.0', '74/2.0', '74/4.0', '75/2.0', '76/3.0', '77/4.0', '79/4.0', '80/2.0', '81/2.0']","[40. 48. 12. 22. 32. 38.  8.  4. 16.  4. 12. 16.  4.  4. 10. 10. 16.  4.
+  8.]","['P8', 'P-4', 'P-5', 'P4', 'P1', 'P1', 'm-6', 'P4', 'M2', 'P4', 'P-8', 'P1', 'P4', 'P-4', 'P11', 'P-8', 'm-7', 'm7', 'P5']",334.0
+22,Quo abiit dilectus tuus,"(1, 1, 2, -2)",ID,"['Superior', 'Contratenor', 'Tenor', 'Bassus']","['43/4.0', '44/4.0', '48/1.0', '49/1.0']",[ 8. 26.  8.],"['P-5', 'P-4', 'P-5']",342.0
+23,Quo abiit dilectus tuus,"(1, 2, -2, 4)",Fuga,"['Superior', 'Tenor']","['44/1.0', '48/3.0']",[36.],['P-8'],344.0
+24,Quo abiit dilectus tuus,"(1, -2, -2, -2)",Fuga,"['Superior', 'Contratenor', 'Tenor', 'Bassus', 'Superior', 'Bassus', 'Tenor']","['45/2.0', '46/4.0', '49/4.0', '51/2.0', '53/2.0', '54/2.0', '54/4.0']",[12. 24. 12. 16.  8.  4.],"['P-5', 'P-4', 'P-5', 'P12', 'P-8', 'P4']",354.0
+25,Quo abiit dilectus tuus,"(2, 2, -2, -2)",Fuga,"['Superior', 'Tenor', 'Superior']","['47/2.5', '51/4.5', '54/4.5']",[36. 24.],"['P-8', 'P5']",371.0
+26,Quo abiit dilectus tuus,"(-2, -2, 2, 2)",Fuga,"['Superior', 'Contratenor']","['54/1.0', '58/2.0']",[34.],['m-2'],424.0
+27,Quo abiit dilectus tuus,"(-2, 2, 2, 2)",Fuga,"['Superior', 'Contratenor']","['54/2.0', '58/3.0']",[34.],['M-2'],426.0
+28,Quo abiit dilectus tuus,"(2, -2, -2, -2)",Fuga,"['Superior', 'Contratenor', 'Bassus']","['55/1.0', '66/3.0', '68/3.0']",[92. 16.],"['m-2', 'P-8']",432.0
+29,Quo abiit dilectus tuus,"(-3, 2, -3, 2)",Fuga,"['Bassus', 'Bassus']","['55/4.0', '56/1.0']",[2.],['m-2'],438.0
+30,Quo abiit dilectus tuus,"(2, -3, 2, 2)",Fuga,"['Bassus', 'Tenor']","['56/2.0', '57/4.0']",[12.],['P5'],442.0
+31,Quo abiit dilectus tuus,"(-3, 2, 2, -3)",Fuga,"['Bassus', 'Tenor', 'Superior']","['56/3.0', '58/1.0', '60/4.0']",[12. 22.],"['P5', 'm7']",444.0
+32,Quo abiit dilectus tuus,"(4, 2, 2, -3)",Fuga,"['Contratenor', 'Superior', 'Tenor', 'Bassus', 'Contratenor', 'Superior', 'Tenor']","['56/4.0', '58/2.0', '60/4.0', '61/4.0', '63/2.0', '64/2.0', '65/4.0']",[12. 20.  8. 12.  8. 12.],"['P5', 'P-8', 'P-5', 'P5', 'P8', 'P-8']",446.0
+33,Quo abiit dilectus tuus,"(2, 2, -3, -2)",Fuga,"['Bassus', 'Tenor']","['57/1.0', '58/3.0']",[12.],['d5'],448.0
+34,Quo abiit dilectus tuus,"(2, 2, -3, 3)",Fuga,"['Contratenor', 'Superior', 'Tenor', 'Bassus', 'Contratenor', 'Superior', 'Tenor']","['57/1.0', '58/3.0', '61/1.0', '62/1.0', '63/3.0', '64/3.0', '66/1.0']",[12. 20.  8. 12.  8. 12.],"['P5', 'P-8', 'P-5', 'P5', 'P8', 'P-8']",448.0
+35,Quo abiit dilectus tuus,"(2, -3, 3, -2)",Fuga,"['Contratenor', 'Superior', 'Tenor', 'Bassus', 'Contratenor', 'Superior', 'Tenor']","['57/2.0', '58/4.0', '61/2.0', '62/2.0', '63/4.0', '64/4.0', '66/2.0']",[12. 20.  8. 12.  8. 12.],"['P5', 'P-8', 'P-5', 'P5', 'P8', 'P-8']",450.0
+36,Quo abiit dilectus tuus,"(-3, 3, -2, -2)",Fuga,"['Contratenor', 'Superior', 'Tenor', 'Bassus', 'Contratenor', 'Superior', 'Tenor']","['57/3.0', '59/1.0', '61/3.0', '62/3.0', '64/1.0', '65/1.0', '66/3.0']",[12. 20.  8. 12.  8. 12.],"['P5', 'P-8', 'P-5', 'P5', 'P8', 'P-8']",452.0
+37,Quo abiit dilectus tuus,"(3, -2, -2, -2)",Fuga,"['Contratenor', 'Tenor', 'Bassus', 'Superior']","['57/4.0', '62/1.0', '62/4.0', '65/2.0']",[34.  6. 20.],"['P-4', 'P-5', 'P12']",454.0
+38,Quo abiit dilectus tuus,"(-2, -2, -2, -3)",Fuga,"['Bassus', 'Superior', 'Bassus']","['63/1.0', '65/3.0', '68/4.0']",[20. 26.],"['P12', 'P-12']",496.0
+39,Quo abiit dilectus tuus,"(2, 2, -2, -2)",Fuga,"['Contratenor', 'Superior']","['66/2.0', '69/1.0']",[22.],['P-4'],522.0
+40,Quo abiit dilectus tuus,"(-2, -2, 2, -2)",Fuga,"['Bassus', 'Contratenor', 'Bassus']","['68/1.0', '70/3.0', '74/3.0']",[20. 32.],"['P5', 'P-5']",536.0
+41,Quo abiit dilectus tuus,"(-2, -2, 2, 2)",Fuga,"['Superior', 'Superior', 'Contratenor', 'Tenor', 'Superior', 'Tenor', 'Superior', 'Contratenor', 'Bassus', 'Tenor', 'Superior']","['68/3.0', '71/1.0', '71/2.0', '72/3.0', '72/4.0', '75/1.0', '77/1.0', '78/1.0', '80/1.0', '80/3.0', '81/3.0']",[20.  2. 10.  2. 18. 16.  8. 16.  4.  8.],"['P5', 'P-5', 'P-4', 'P8', 'P-5', 'P8', 'P-8', 'm-7', 'P4', 'P8']",540.0
+42,Quo abiit dilectus tuus,"(2, 2, 2, -5)",Fuga,"['Superior', 'Tenor']","['71/3.0', '73/1.0']",[12.],['P-8'],564.0
+43,Quo abiit dilectus tuus,"(2, 2, 2, -3)",Fuga,"['Tenor', 'Contratenor']","['77/2.0', '78/3.0']",[10.],['P4'],610.0
+44,Quo abiit dilectus tuus,"(2, 2, -3, 2)",Fuga,"['Tenor', 'Bassus']","['77/3.0', '81/4.0']",[34.],['P-4'],612.0
+45,Quo abiit dilectus tuus,"(-2, 1, -2, 2)",Fuga,"['Superior', 'Superior']","['79/2.0', '82/4.0']",[28.],['P-4'],626.0
+46,Quo abiit dilectus tuus,"(1, -3, 1, 2)",ID,"['Superior', 'Contratenor', 'Tenor', 'Bassus']","['85/1.0', '87/1.0', '90/1.0', '92/1.0']",[16. 24. 16.],"['P-5', 'P-4', 'P-5']",680.0
+47,Quo abiit dilectus tuus,"(-3, 1, 2, 2)",Fuga,"['Superior', 'Contratenor', 'Contratenor', 'Tenor', 'Bassus']","['85/4.0', '87/4.0', '90/2.0', '90/4.0', '92/4.0']",[16. 20.  4. 16.],"['P-5', 'M2', 'P-5', 'P-5']",686.0
+48,Quo abiit dilectus tuus,"(1, 2, 2, 2)",Fuga,"['Superior', 'Contratenor', 'Contratenor', 'Tenor', 'Bassus']","['86/1.0', '88/1.0', '90/4.0', '91/1.0', '93/1.0']",[16. 22.  2. 16.],"['d-5', 'm2', 'P-5', 'd-5']",688.0
+49,Quo abiit dilectus tuus,"(2, 2, 2, -2)",Fuga,"['Superior', 'Contratenor', 'Superior', 'Tenor', 'Bassus']","['86/2.0', '88/2.0', '89/2.0', '91/2.0', '93/2.0']",[16.  8. 16. 16.],"['d-5', 'm6', 'M-9', 'd-5']",690.0
+50,Quo abiit dilectus tuus,"(2, -3, 3, -2)",Fuga,"['Contratenor', 'Tenor', 'Contratenor']","['91/3.0', '95/3.0', '100/2.0']",[32. 38.],"['P-4', 'P4']",732.0
+51,Quo abiit dilectus tuus,"(-3, 3, -2, -2)",Fuga,"['Contratenor', 'Tenor']","['91/4.0', '95/4.0']",[32.],['P-4'],734.0
+52,Quo abiit dilectus tuus,"(3, -2, -2, -3)",Fuga,"['Contratenor', 'Tenor']","['92/1.5', '96/1.0']",[31.],['P-4'],737.0
+53,Quo abiit dilectus tuus,"(-2, -2, -3, 2)",ID,"['Tenor', 'Bassus', 'Contratenor', 'Superior']","['93/2.0', '94/4.0', '95/3.0', '97/1.0']",[12.  6. 12.],"['P-5', 'P8', 'P5']",746.0
+54,Quo abiit dilectus tuus,"(-2, -3, 2, 2)",Fuga,"['Tenor', 'Superior', 'Tenor']","['93/3.0', '97/3.0', '99/4.0']",[32. 18.],"['P8', 'm-7']",748.0
+55,Quo abiit dilectus tuus,"(-3, 2, 2, 2)",Fuga,"['Tenor', 'Bassus', 'Superior', 'Tenor', 'Contratenor']","['93/4.0', '96/4.0', '97/4.0', '100/2.0', '103/4.0']",[24.  8. 20. 28.],"['A-4', 'A11', 'M-7', 'M3']",750.0
+56,Quo abiit dilectus tuus,"(2, 2, 2, -3)",Fuga,"['Bassus', 'Superior', 'Tenor']","['97/1.0', '98/3.0', '100/3.0']",[12. 16.],"['P12', 'P-8']",776.0
+57,Quo abiit dilectus tuus,"(2, 2, -3, -2)",Fuga,"['Bassus', 'Superior']","['97/2.5', '98/4.0']",[11.],['P12'],779.0
+58,Quo abiit dilectus tuus,"(2, 2, -2, -2)",Fuga,"['Contratenor', 'Superior', 'Contratenor']","['97/4.0', '99/4.0', '104/2.0']",[16. 36.],"['P5', 'P-5']",782.0
+59,Quo abiit dilectus tuus,"(-2, 2, 2, -2)",Fuga,"['Contratenor', 'Superior']","['99/1.0', '99/3.0']",[4.],['P5'],792.0
+60,Quo abiit dilectus tuus,"(5, 1, -3, 2)",Fuga,"['Bassus', 'Contratenor', 'Superior']","['99/4.0', '103/2.0', '104/4.0']",[28. 12.],"['P5', 'P4']",798.0
+61,Quo abiit dilectus tuus,"(1, -3, 2, 2)",Fuga,"['Bassus', 'Tenor', 'Contratenor', 'Superior', 'Tenor']","['100/1.0', '102/1.0', '103/3.0', '105/1.0', '106/3.0']",[16. 12. 12. 12.],"['P1', 'P5', 'P4', 'P-5']",800.0
+62,Quo abiit dilectus tuus,"(2, -2, -2, -2)",Fuga,"['Superior', 'Bassus', 'Contratenor']","['100/1.5', '103/4.0', '104/3.0']",[29.  6.],"['P-12', 'P8']",801.0
+63,Quo abiit dilectus tuus,"(-2, -2, -2, 2)",Fuga,"['Superior', 'Bassus', 'Contratenor', 'Tenor', 'Superior', 'Contratenor']","['100/2.0', '104/4.0', '105/1.5', '118/2.0', '121/4.0', '124/4.0']",[ 36.   3. 105.  28.  24.],"['m-14', 'M9', 'M-3', 'P4', 'm-3']",802.0
+64,Quo abiit dilectus tuus,"(4, 1, -3, 2)",Fuga,"['Tenor', 'Tenor', 'Bassus']","['101/4.0', '106/2.0', '108/2.0']",[36. 16.],"['P4', 'P-8']",814.0
+65,Quo abiit dilectus tuus,"(-3, 2, 2, 3)",Fuga,"['Tenor', 'Superior']","['102/2.0', '105/2.0']",[24.],['P8'],818.0
+66,Quo abiit dilectus tuus,"(-2, 1, -2, -2)",Fuga,"['Tenor', 'Contratenor']","['103/2.0', '106/4.0']",[28.],['P4'],826.0
+67,Quo abiit dilectus tuus,"(1, -2, -2, 2)",Fuga,"['Tenor', 'Contratenor']","['103/3.5', '107/1.5']",[28.],['P4'],829.0
+68,Quo abiit dilectus tuus,"(-2, -2, -2, -2)",Fuga,"['Bassus', 'Contratenor', 'Contratenor', 'Bassus', 'Superior', 'Superior']","['104/1.0', '104/4.0', '112/3.0', '117/2.0', '121/2.0', '121/3.5']",[ 6. 62. 38. 32.  3.],"['P8', 'm-2', 'P-8', 'P11', 'M-2']",832.0
+69,Quo abiit dilectus tuus,"(2, 2, -3, -2)",Fuga,"['Tenor', 'Tenor']","['107/1.0', '110/2.0']",[26.],['M-2'],856.0
+70,Quo abiit dilectus tuus,"(1, 1, 3, -2)",Fuga,"['Contratenor', 'Superior', 'Bassus', 'Tenor', 'Contratenor', 'Superior']","['110/4.0', '111/4.0', '114/2.0', '116/2.0', '118/2.0', '119/2.0']",[ 8. 20. 16. 16.  8.],"['P5', 'P-11', 'P4', 'P1', 'P5']",886.0
+71,Quo abiit dilectus tuus,"(1, 3, -2, -3)",Fuga,"['Contratenor', 'Superior', 'Bassus', 'Tenor', 'Superior']","['111/1.0', '112/1.0', '114/3.0', '116/3.0', '119/3.0']",[ 8. 20. 16. 24.],"['P5', 'P-11', 'P4', 'P5']",888.0
+72,Quo abiit dilectus tuus,"(3, -2, -3, 2)",Fuga,"['Contratenor', 'Superior', 'Bassus', 'Tenor', 'Superior']","['111/2.0', '112/2.0', '114/4.0', '116/4.0', '119/4.0']",[ 8. 20. 16. 24.],"['P5', 'P-11', 'P4', 'P5']",890.0
+73,Quo abiit dilectus tuus,"(-2, -3, 2, 2)",Fuga,"['Contratenor', 'Superior', 'Bassus', 'Tenor', 'Tenor', 'Superior']","['111/3.0', '112/3.0', '115/1.0', '117/1.0', '119/3.0', '120/1.0']",[ 8. 20. 16. 20.  4.],"['P5', 'P-11', 'P4', 'm-3', 'm7']",892.0
+74,Quo abiit dilectus tuus,"(-3, 2, 2, -2)",Fuga,"['Contratenor', 'Bassus']","['111/4.0', '115/2.0']",[28.],['M-7'],894.0
+75,Quo abiit dilectus tuus,"(2, 2, -2, -2)",Fuga,"['Contratenor', 'Superior', 'Superior', 'Tenor', 'Contratenor']","['112/1.0', '113/2.0', '114/3.0', '117/4.0', '119/3.0']",[10. 10. 26. 14.],"['M6', 'M-2', 'm-7', 'm3']",896.0
+76,Quo abiit dilectus tuus,"(2, -2, -2, -2)",Fuga,"['Contratenor', 'Superior', 'Tenor']","['112/2.0', '115/4.0', '118/1.0']",[28. 18.],"['P4', 'm-6']",898.0
+77,Quo abiit dilectus tuus,"(-3, 2, 2, 2)",Fuga,"['Superior', 'Tenor']","['112/4.0', '117/2.0']",[36.],['P-8'],902.0
+78,Quo abiit dilectus tuus,"(2, 2, 2, -2)",Fuga,"['Superior', 'Tenor', 'Contratenor']","['113/1.0', '117/3.0', '119/2.0']",[36. 14.],"['P-8', 'M3']",904.0
+79,Quo abiit dilectus tuus,"(-2, -2, 2, -2)",Fuga,"['Superior', 'Tenor']","['114/4.0', '118/3.5']",[31.],['P-8'],918.0
+80,Quo abiit dilectus tuus,"(3, -2, -2, -2)",Fuga,"['Bassus', 'Superior']","['117/1.0', '121/1.0']",[32.],['P11'],936.0
+81,Quo abiit dilectus tuus,"(-2, 2, 2, 2)",Fuga,"['Contratenor', 'Tenor', 'Tenor']","['119/1.0', '120/4.0', '131/1.0']",[14. 82.],"['m-6', 'P5']",952.0
+82,Quo abiit dilectus tuus,"(1, 1, -5, 3)",Fuga,"['Bassus', 'Contratenor', 'Superior', 'Tenor', 'Bassus']","['121/2.0', '123/2.0', '124/3.0', '127/2.0', '129/3.0']",[16. 10. 22. 18.],"['P8', 'P5', 'P-8', 'P1']",970.0
+83,Quo abiit dilectus tuus,"(1, -5, 3, -2)",Fuga,"['Bassus', 'Contratenor', 'Superior', 'Tenor', 'Bassus']","['121/3.0', '123/3.0', '125/1.0', '127/3.0', '130/1.0']",[16. 12. 20. 20.],"['P8', 'P5', 'P-8', 'P1']",972.0
+84,Quo abiit dilectus tuus,"(-2, -2, -3, 2)",Fuga,"['Contratenor', 'Bassus']","['121/4.0', '122/4.0']",[8.],['P-4'],974.0
+85,Quo abiit dilectus tuus,"(3, -2, 4, -2)",Fuga,"['Contratenor', 'Superior', 'Tenor']","['124/1.0', '125/3.0', '128/1.0']",[12. 20.],"['P5', 'P-8']",992.0
+86,Quo abiit dilectus tuus,"(-2, 4, -2, -2)",Fuga,"['Contratenor', 'Superior', 'Tenor']","['124/2.0', '125/4.0', '128/2.0']",[12. 20.],"['d5', 'P-8']",994.0
+87,Quo abiit dilectus tuus,"(4, -2, -2, -2)",Fuga,"['Contratenor', 'Superior']","['124/3.0', '126/1.0']",[12.],['P5'],996.0
+88,Quo abiit dilectus tuus,"(2, 2, 2, -2)",Fuga,"['Contratenor', 'Tenor']","['126/4.0', '131/3.0']",[38.],['m-3'],1014.0
+89,Quo abiit dilectus tuus,"(2, 3, -2, -2)",Fuga,"['Superior', 'Superior', 'Bassus']","['129/2.0', '132/4.0', '137/2.0']",[28. 36.],"['m-3', 'M-9']",1034.0
+90,Quo abiit dilectus tuus,"(-2, -2, 2, -2)",Fuga,"['Superior', 'Tenor']","['129/4.0', '130/3.5']",[7.],['P-8'],1038.0
+91,Quo abiit dilectus tuus,"(3, -2, -2, 1)",Fuga,"['Superior', 'Tenor', 'Superior']","['133/1.0', '134/3.0', '138/1.0']",[12. 28.],"['P-8', 'P8']",1064.0
+92,Quo abiit dilectus tuus,"(-2, -2, 1, 3)",Fuga,"['Superior', 'Contratenor', 'Tenor', 'Superior']","['133/2.0', '133/4.0', '134/4.0', '138/2.0']",[ 4.  8. 28.],"['P-4', 'P-5', 'P8']",1066.0
+93,Quo abiit dilectus tuus,"(-2, 1, 3, 3)",Fuga,"['Superior', 'Tenor', 'Superior']","['133/4.0', '135/2.0', '138/4.0']",[12. 28.],"['P-8', 'P8']",1070.0
+94,Quo abiit dilectus tuus,"(3, 3, -2, -2)",ID,"['Superior', 'Bassus', 'Superior', 'Superior']","['134/2.0', '135/4.0', '137/4.0', '139/2.0']",[12. 16. 12.],"['m-10', 'P8', 'm3']",1074.0
+95,Quo abiit dilectus tuus,"(-2, -2, -3, 2)",Fuga,"['Bassus', 'Superior']","['136/2.0', '140/1.0']",[30.],['M9'],1090.0
+96,Quo abiit dilectus tuus,"(2, 2, -2, -2)",Fuga,"['Tenor', 'Bassus', 'Superior']","['136/4.0', '142/3.0', '143/3.0']",[46.  8.],"['M-6', 'M9']",1094.0
+97,Quo abiit dilectus tuus,"(2, -2, -2, -2)",Fuga,"['Tenor', 'Bassus', 'Contratenor', 'Bassus']","['137/1.0', '142/4.0', '150/3.0', '152/4.0']",[46. 62. 18.],"['m-6', 'P8', 'M-10']",1096.0
+98,Quo abiit dilectus tuus,"(-2, -2, -2, 2)",Fuga,"['Tenor', 'Bassus', 'Tenor', 'Bassus', 'Tenor', 'Tenor']","['137/2.0', '143/1.0', '147/3.0', '151/3.0', '152/4.0', '155/4.0']",[46. 36. 32. 10. 24.],"['M-6', 'M3', 'M-3', 'P5', 'P-4']",1098.0
+99,Quo abiit dilectus tuus,"(3, -2, -2, -2)",Fuga,"['Bassus', 'Superior', 'Tenor']","['137/3.0', '139/3.0', '142/3.0']",[16. 24.],"['P11', 'P-8']",1100.0
+100,Quo abiit dilectus tuus,"(-2, 2, 2, 2)",Fuga,"['Tenor', 'Contratenor', 'Tenor', 'Bassus', 'Superior', 'Contratenor']","['137/4.0', '139/2.0', '140/4.0', '141/4.0', '142/4.0', '146/2.0']",[12. 12.  8.  8. 28.],"['m3', 'P-4', 'P-5', 'M9', 'M-7']",1102.0
+101,Quo abiit dilectus tuus,"(2, 2, 2, -3)",Fuga,"['Tenor', 'Tenor']","['138/2.0', '141/2.0']",[24.],['M-2'],1106.0
+102,Quo abiit dilectus tuus,"(2, 2, 2, -2)",Fuga,"['Bassus', 'Superior', 'Superior']","['142/2.0', '143/2.0', '149/4.0']",[ 8. 52.],"['M9', 'P5']",1138.0
+103,Quo abiit dilectus tuus,"(-2, -2, -2, -2)",Fuga,"['Tenor', 'Tenor', 'Tenor', 'Bassus', 'Contratenor', 'Contratenor', 'Superior', 'Superior', 'Superior', 'Tenor', 'Tenor', 'Contratenor', 'Bassus', 'Bassus', 'Bassus', 'Superior', 'Superior', 'Superior', 'Bassus', 'Bassus']","['142/4.0', '143/2.0', '147/1.0', '147/2.0', '150/4.0', '151/1.5', '154/3.0', '154/4.5', '155/1.0', '155/2.5', '155/3.0', '157/1.0', '157/3.0', '157/4.5', '158/1.0', '159/1.0', '159/2.0', '159/3.0', '161/1.0', '161/2.5']","[ 4. 30.  2. 28.  3. 27.  3.  1.  3.  1. 12.  4.  3.  1.  8.  2.  2. 12.
+  3.]","['m-2', 'm2', 'P-5', 'P8', 'm-2', 'm6', 'm-2', 'M-2', 'm-7', 'M-2', 'm2', 'P-4', 'm-2', 'M-2', 'm14', 'm-2', 'M-2', 'M-10', 'm-2']",1142.0
+104,Quo abiit dilectus tuus,"(5, -5, 4, -2)",Fuga,"['Contratenor', 'Tenor', 'Superior', 'Bassus']","['143/4.0', '144/4.0', '147/4.0', '150/2.0']",[ 8. 24. 20.],"['P-5', 'P8', 'P-8']",1150.0
+105,Quo abiit dilectus tuus,"(-5, 4, -2, 3)",Fuga,"['Tenor', 'Superior']","['145/1.0', '148/1.0']",[24.],['P8'],1160.0
+106,Quo abiit dilectus tuus,"(4, -2, 3, -2)",Fuga,"['Tenor', 'Superior']","['145/3.0', '148/3.0']",[24.],['P8'],1164.0
+107,Quo abiit dilectus tuus,"(-2, 2, -2, -2)",Fuga,"['Contratenor', 'Bassus']","['150/2.0', '152/2.0']",[16.],['m-10'],1202.0
+108,Quo abiit dilectus tuus,"(3, -2, -2, -2)",Fuga,"['Tenor', 'Superior', 'Tenor', 'Contratenor', 'Bassus', 'Superior', 'Bassus']","['152/3.0', '154/2.0', '154/4.0', '156/4.0', '157/2.0', '158/4.0', '160/4.0']",[14.  4. 16.  4. 12. 16.],"['P8', 'P-8', 'M-2', 'P-4', 'P12', 'P-12']",1220.0
+109,Quo abiit dilectus tuus,"(-2, -2, -2, 1)",Fuga,"['Superior', 'Superior']","['155/2.0', '159/4.0']",[36.],['P1'],1242.0
+110,Quo abiit dilectus tuus,"(-2, -2, 1, -2)",Fuga,"['Superior', 'Superior']","['155/3.0', '160/1.0']",[36.],['P1'],1244.0
+111,Quo abiit dilectus tuus,"(2, 2, 2, 2)",Fuga,"['Tenor', 'Tenor', 'Contratenor']","['159/3.0', '159/4.0', '160/4.0']",[2. 8.],"['M2', 'M-2']",1276.0
+112,Quo abiit dilectus tuus,"(-2, -2, -2, 2)",Fuga,"['Superior', 'Tenor']","['161/2.0', '164/3.0']",[26.],['d-5'],1290.0
