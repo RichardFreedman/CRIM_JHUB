@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 1600px;
+            height: 900px;
+            background-color: black;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"font": {"color": "white"}, "group": 0, "id": "Ave Maria", "label": "Ave Maria", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 1, "id": "Missa Ave Maria: Credo", "label": "Missa Ave Maria: Credo", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 0, "id": "Missa Ave Maria: Gloria", "label": "Missa Ave Maria: Gloria", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 3, "id": "Missa Ave Maria: Agnus Dei", "label": "Missa Ave Maria: Agnus Dei", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 2, "id": "Missa Ave Maria: Kyrie", "label": "Missa Ave Maria: Kyrie", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 2, "id": "Missa Ave Maria: Sanctus", "label": "Missa Ave Maria: Sanctus", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "Ave Maria", "to": "Missa Ave Maria: Credo", "weight": 1}, {"from": "Ave Maria", "to": "Ave Maria", "weight": 1}, {"from": "Ave Maria", "to": "Missa Ave Maria: Gloria", "weight": 1}, {"from": "Ave Maria", "to": "Missa Ave Maria: Agnus Dei", "weight": 1}, {"from": "Missa Ave Maria: Credo", "to": "Missa Ave Maria: Gloria", "weight": 1}, {"from": "Missa Ave Maria: Credo", "to": "Missa Ave Maria: Agnus Dei", "weight": 1}, {"from": "Missa Ave Maria: Credo", "to": "Missa Ave Maria: Credo", "weight": 1}, {"from": "Missa Ave Maria: Credo", "to": "Missa Ave Maria: Kyrie", "weight": 1}, {"from": "Missa Ave Maria: Credo", "to": "Missa Ave Maria: Sanctus", "weight": 1}, {"from": "Missa Ave Maria: Gloria", "to": "Missa Ave Maria: Gloria", "weight": 1}, {"from": "Missa Ave Maria: Gloria", "to": "Missa Ave Maria: Agnus Dei", "weight": 1}, {"from": "Missa Ave Maria: Gloria", "to": "Missa Ave Maria: Kyrie", "weight": 1}, {"from": "Missa Ave Maria: Gloria", "to": "Missa Ave Maria: Sanctus", "weight": 1}, {"from": "Missa Ave Maria: Agnus Dei", "to": "Missa Ave Maria: Kyrie", "weight": 1}, {"from": "Missa Ave Maria: Agnus Dei", "to": "Missa Ave Maria: Sanctus", "weight": 1}, {"from": "Missa Ave Maria: Agnus Dei", "to": "Missa Ave Maria: Agnus Dei", "weight": 1}, {"from": "Missa Ave Maria: Kyrie", "to": "Missa Ave Maria: Kyrie", "weight": 1}, {"from": "Missa Ave Maria: Kyrie", "to": "Missa Ave Maria: Sanctus", "weight": 1}, {"from": "Missa Ave Maria: Sanctus", "to": "Missa Ave Maria: Sanctus", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
