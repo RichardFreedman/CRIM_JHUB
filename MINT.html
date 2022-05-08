@@ -14,7 +14,7 @@
         #mynetwork {
             width: 1800;
             height: 1400;
-            background-color: black;
+            background-color: white;
             border: 1px solid lightgray;
             position: relative;
             float: left;
@@ -50,8 +50,8 @@
         
 
         // parsing and collecting nodes and edges from the python
-        nodes = new vis.DataSet([{"font": {"color": "white"}, "group": 0, "id": "Veni speciosam", "label": "Veni speciosam", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 1, "id": "Quo abiit dilectus tuus", "label": "Quo abiit dilectus tuus", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 2, "id": "Veni sponsa Christi", "label": "Veni sponsa Christi", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 1, "id": "Ave Maria", "label": "Ave Maria", "shape": "dot", "size": 10}]);
-        edges = new vis.DataSet([{"from": "Veni speciosam", "to": "Quo abiit dilectus tuus", "weight": 1}, {"from": "Veni speciosam", "to": "Veni sponsa Christi", "weight": 1}, {"from": "Veni speciosam", "to": "Ave Maria", "weight": 1}, {"from": "Veni speciosam", "to": "Veni speciosam", "weight": 1}, {"from": "Quo abiit dilectus tuus", "to": "Ave Maria", "weight": 1}, {"from": "Quo abiit dilectus tuus", "to": "Veni sponsa Christi", "weight": 1}, {"from": "Ave Maria", "to": "Ave Maria", "weight": 1}, {"from": "Veni sponsa Christi", "to": "Veni sponsa Christi", "weight": 1}]);
+        nodes = new vis.DataSet([]);
+        edges = new vis.DataSet([]);
 
         // adding nodes and edges to the graph
         data = {nodes: nodes, edges: edges};
