@@ -1,0 +1,72 @@
+,Validation,Comments,Composer,Title,First_Offset,Measures_Beats,Melodic_Entry_Intervals,Offsets,Soggetti,Time_Entry_Intervals,Voices,Presentation_Type,Number_Entries,Flexed_Entries
+0,,,Philippe Verdelot,Ultimi miei sospiri,0.0,"['1/1.0', '5/1.0']",['P-4'],"[0.0, 32.0]","[('3', '-2', '-3', '2')]",[32.0],"['Cantus', 'Quintus']",FUGA,2.0,False
+1,,,Philippe Verdelot,Ultimi miei sospiri,8.0,"['2/1.0', '5/1.0']",['P-8'],"[8.0, 32.0]","[('5', '-2', '-3', '2')]",[24.0],"['Tenor', 'Bassus']",FUGA,2.0,False
+2,,,Philippe Verdelot,Ultimi miei sospiri,62.0,"['8/4.0', '12/2.0']",['P1'],"[62.0, 90.0]","[('5', '-2', '-2', '-2')]",[28.0],"['Sextus', 'Tenor']",FUGA,2.0,False
+3,,,Philippe Verdelot,Ultimi miei sospiri,68.0,"['9/3.0', '12/3.0', '13/1.0']","['P-8', 'P8']","[68.0, 92.0, 96.0]","[('4', '-2', '-2', '-2')]","[24.0, 4.0]","['Altus', 'Bassus', 'Quintus']",FUGA,3.0,False
+4,,,Philippe Verdelot,Ultimi miei sospiri,124.0,['16/3.0'],['M-3'],"[124.0, 124.0]","[('2', '-2', '-3', '2')]",[0.0],"['Cantus', 'Altus']",FUGA,2.0,False
+5,,,Philippe Verdelot,Ultimi miei sospiri,128.0,"['17/1.0', '20/1.0']",['P-8'],"[128.0, 152.0]","[('5', '-2', '-3', '2')]",[24.0],"['Tenor', 'Bassus']",FUGA,2.0,False
+6,,,Philippe Verdelot,Ultimi miei sospiri,182.0,"['23/4.0', '27/2.0']",['P1'],"[182.0, 210.0]","[('5', '-2', '-2', '-2')]",[28.0],"['Sextus', 'Tenor']",FUGA,2.0,False
+7,,,Philippe Verdelot,Ultimi miei sospiri,188.0,"['24/3.0', '27/3.0', '28/1.0']","['P-8', 'P8']","[188.0, 212.0, 216.0]","[('4', '-2', '-2', '-2')]","[24.0, 4.0]","['Altus', 'Bassus', 'Quintus']",FUGA,3.0,False
+8,,,Philippe Verdelot,Ultimi miei sospiri,284.0,"['36/3.0', '40/3.0']",['P-5'],"[284.0, 316.0]","[('-3', '4', '-2', '-2')]",[32.0],"['Cantus', 'Quintus']",FUGA,2.0,False
+9,,,Philippe Verdelot,Ultimi miei sospiri,294.0,"['37/4.0', '40/2.0', '41/4.0']","['P1', 'P-5']","[294.0, 314.0, 326.0]","[('4', '-2', '-2', '-2')]","[20.0, 12.0]","['Sextus', 'Tenor', 'Bassus']",FUGA,3.0,False
+10,,,Philippe Verdelot,Ultimi miei sospiri,344.0,"['44/1.0', '45/2.0']",['P4'],"[344.0, 354.0]","[('4', '-2', '-2', '4')]",[10.0],"['Sextus', 'Tenor']",FUGA,2.0,False
+11,,,Philippe Verdelot,Ultimi miei sospiri,374.0,"['47/4.0', '49/2.0']",['M-6'],"[374.0, 386.0]","[('2', '-2', '2', '-3')]",[12.0],"['Tenor', 'Sextus']",FUGA,2.0,False
+12,,,Philippe Verdelot,Ultimi miei sospiri,416.0,"['53/1.0', '53/4.0', '56/1.0', '56/3.0']","['m-3', 'P5', 'P4', 'P-4']","[416.0, 416.0, 422.0, 440.0, 444.0]","[('-2', '-2', '2', '-3')]","[0.0, 6.0, 18.0, 4.0]","['Tenor', 'Sextus', 'Quintus', 'Cantus', 'Altus']",FUGA,5.0,False
+13,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Kyrie,0.0,"['1/1.0', '6/2.0']",['P-4'],"[0.0, 42.0]","[('3', '-2', '-3', '2')]",[42.0],"['Cantus', 'Altus']",FUGA,2.0,False
+14,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Kyrie,8.0,"['2/1.0', '5/1.0']",['P-8'],"[8.0, 32.0]","[('5', '-2', '-3', '2')]",[24.0],"['Quintus', 'Bassus']",FUGA,2.0,False
+15,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Kyrie,28.0,"['4/3.0', '11/4.0']",['P8'],"[28.0, 86.0]","[('4', '-2', '-3', '2')]",[58.0],"['Tenor', 'Cantus']",FUGA,2.0,False
+16,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Kyrie,76.0,"['10/3.0', '13/3.0']",['P-4'],"[76.0, 100.0]","[('4', '-2', '-2', '-2')]",[24.0],"['Bassus', 'Bassus']",FUGA,2.0,False
+17,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Kyrie,192.0,"['25/1.0', '26/1.0', '28/3.0', '29/1.0']","['P-5', 'P-8', 'P8']","[192.0, 200.0, 220.0, 224.0]","[('4', '-2', '-2', '-2')]","[8.0, 20.0, 4.0]","['Cantus', 'Quintus', 'Bassus', 'Altus']",FUGA,4.0,False
+18,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Kyrie,328.0,['42/1.0'],['M-3'],"[328.0, 328.0]","[('4', '-2', '2', '-3')]",[0.0],"['Altus', 'Quintus']",FUGA,2.0,False
+19,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Kyrie,430.0,"['54/4.0', '62/1.0']",['P1'],"[430.0, 488.0]","[('2', '2', '-2', '-2')]",[58.0],"['Tenor', 'Tenor']",FUGA,2.0,False
+20,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Kyrie,434.0,"['55/2.0', '59/2.0', '62/2.0']","['P8', 'P-8']","[434.0, 466.0, 490.0]","[('2', '-3', '2', '-2')]","[32.0, 24.0]","['Bassus', 'Cantus', 'Bassus']",FUGA,3.0,False
+21,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Kyrie,724.0,"['91/3.0', '92/2.0']",['P5'],"[724.0, 730.0]","[('-2', '-2', '2', '-3')]",[6.0],"['Tenor', 'Altus']",FUGA,2.0,False
+22,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,0.0,"['1/1.0', '1/3.0', '8/1.0']","['P5', 'P-8']","[0.0, 4.0, 56.0]","[('3', '-2', '-3', '2')]","[4.0, 52.0]","['Quintus', 'Altus', 'Tenor']",FUGA,3.0,False
+23,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,0.0,"['1/1.0', '8/1.0']",['P-15'],"[0.0, 56.0]","[('5', '-2', '-3', '2')]",[56.0],"['Cantus', 'Bassus']",FUGA,2.0,False
+24,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,106.0,"['14/2.0', '20/1.0']",['P-8'],"[106.0, 152.0]","[('4', '-2', '-2', '-2')]",[46.0],"['Quintus', 'Bassus']",FUGA,2.0,False
+25,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,322.0,"['41/2.0', '43/4.0', '46/4.0', '47/1.0']","['P-8', 'P1', 'P-5']","[322.0, 342.0, 366.0, 368.0]","[('-3', '4', '-2', '-2')]","[20.0, 24.0, 2.0]","['Cantus', 'Tenor', 'Quintus', 'Bassus']",FUGA,4.0,False
+26,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,458.0,"['58/2.0', '61/2.0']",['P1'],"[458.0, 482.0]","[('2', '-3', '2', '-3')]",[24.0],"['Bassus', 'Tenor']",FUGA,2.0,False
+27,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,542.0,"['68/4.0', '70/1.0']",['P1'],"[542.0, 552.0]","[('-2', '-2', '-2', '-2')]",[10.0],"['Quintus', 'Altus']",FUGA,2.0,False
+28,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,632.0,"['80/1.0', '83/3.0']",['P-8'],"[632.0, 660.0]","[('-3', '3', '2', '-2')]",[28.0],"['Altus', 'Tenor']",FUGA,2.0,False
+29,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,632.0,"['80/1.0', '84/1.0']",['P-8'],"[632.0, 664.0]","[('2', '2', '-5', '5')]",[32.0],"['Quintus', 'Bassus']",FUGA,2.0,False
+30,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,820.0,"['103/3.0', '106/4.0', '107/1.0', '107/3.0']","['P-8', 'P-5', 'P8']","[820.0, 846.0, 848.0, 852.0]","[('-2', '-2', '-2', '-2')]","[26.0, 2.0, 4.0]","['Cantus', 'Tenor', 'Bassus', 'Quintus']",FUGA,4.0,False
+31,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,862.0,"['108/4.0', '113/2.0', '113/4.0', '116/2.0', '118/2.0']","['P-4', 'P-5', 'P8', 'P-8']","[862.0, 898.0, 902.0, 922.0, 938.0]","[('2', '3', '-2', '-2')]","[36.0, 4.0, 20.0, 16.0]","['Cantus', 'Altus', 'Quintus', 'Cantus', 'Tenor']",FUGA,5.0,False
+32,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,950.0,"['119/4.0', '120/1.0']",['P-5'],"[950.0, 952.0]","[('4', '-3', '4', '-3')]",[2.0],"['Quintus', 'Bassus']",FUGA,2.0,False
+33,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,1094.0,"['137/4.0', '139/4.0']",['P4'],"[1094.0, 1110.0]","[('-2', '-3', '3', '-2')]",[16.0],"['Tenor', 'Altus']",FUGA,2.0,False
+34,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,1178.0,"['148/2.0', '148/4.0']",['P-5'],"[1178.0, 1182.0]","[('2', '-2', '-2', '-2')]",[4.0],"['Quintus', 'Bassus']",FUGA,2.0,False
+35,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,1190.0,['149/4.0'],['m-3'],"[1190.0, 1190.0]","[('2', '-4', '3', '-2')]",[0.0],"['Altus', 'Quintus']",FUGA,2.0,False
+36,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,1318.0,"['165/4.0', '170/4.0', '172/4.0', '173/2.0']","['M2', 'm3', 'P-4']","[1318.0, 1358.0, 1374.0, 1378.0]","[('-2', '2', '2', '-3')]","[40.0, 16.0, 4.0]","['Quintus', 'Quintus', 'Quintus', 'Bassus']",FUGA,4.0,False
+37,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Gloria,1322.0,"['166/2.0', '171/4.0', '178/2.0']","['M-3', 'm-3']","[1322.0, 1366.0, 1418.0]","[('-3', '2', '2', '-3')]","[44.0, 52.0]","['Cantus', 'Cantus', 'Altus']",FUGA,3.0,False
+38,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,0.0,"['1/1.0', '5/1.0', '10/1.0']","['P1', 'P1']","[0.0, 32.0, 72.0]","[('3', '-2', '2', '-2')]","[32.0, 40.0]","['Q', 'A', 'T']",FUGA,3.0,False
+39,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,136.0,"['18/1.0', '18/3.0']",['P8'],"[136.0, 140.0]","[('-2', '-2', '-2', '-2')]",[4.0],"['T', 'C']",FUGA,2.0,False
+40,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,286.0,"['36/4.0', '38/2.0']",['P5'],"[286.0, 298.0]","[('2', '2', '-2', '-2')]",[12.0],"['B', 'T']",FUGA,2.0,False
+41,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,354.0,"['45/2.0', '50/1.0']",['P-5'],"[354.0, 392.0]","[('-3', '4', '-2', '-5')]",[38.0],"['Q', 'B']",FUGA,2.0,False
+42,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,612.0,"['77/3.0', '77/4.0']","['P-4', 'M-3']","[612.0, 614.0, 614.0]","[('-2', '-2', '-2', '-2')]","[2.0, 0.0]","['C', 'A', 'Q']",FUGA,3.0,False
+43,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,692.0,"['87/3.0', '89/2.0']",['P-4'],"[692.0, 706.0]","[('-2', '-2', '-2', '3')]",[14.0],"['C', 'A']",FUGA,2.0,False
+44,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,976.0,"['120/1.0', '122/3.0', '125/1.0']","['P1', 'P5']","[976.0, 996.0, 1016.0]","[('2', '-2', '2', '-3')]","[20.0, 20.0]","['B', 'Q', 'A']",PEN,3.0,False
+45,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,1078.0,"['132/4.0', '133/2.0', '134/2.0', '134/4.0']","['P8', 'P-4', 'P1']","[1078.0, 1082.0, 1090.0, 1094.0]","[('-2', '-2', '2', '2')]","[4.0, 8.0, 4.0]","['B', 'A', 'Q', 'B']",ID,4.0,False
+46,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,1110.0,"['136/4.0', '139/4.0']",['P11'],"[1110.0, 1134.0]","[('2', '2', '-2', '-2')]",[24.0],"['B', 'A']",FUGA,2.0,False
+47,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,1174.0,"['144/4.0', '146/2.0']",['P8'],"[1174.0, 1186.0]","[('-2', '-3', '3', '2')]",[12.0],"['B', 'A']",FUGA,2.0,False
+48,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,1198.0,"['147/4.0', '148/3.0']",['P8'],"[1198.0, 1204.0]","[('-2', '-3', '2', '-2')]",[6.0],"['B', 'A']",FUGA,2.0,False
+49,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,1238.0,"['152/4.0', '153/4.0', '154/4.0', '155/2.0']","['P-8', 'P5', 'P4']","[1238.0, 1246.0, 1254.0, 1258.0]","[('2', '2', '2', '2')]","[8.0, 8.0, 4.0]","['A', 'B', 'Q', 'A']",FUGA,4.0,False
+50,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,1294.0,"['159/4.0', '160/2.0']",['P4'],"[1294.0, 1298.0]","[('8', '-2', '-2', '-2')]",[4.0],"['Q', 'A']",FUGA,2.0,False
+51,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,1366.0,"['168/4.0', '172/2.0']",['M-2'],"[1366.0, 1394.0]","[('-2', '-3', '5', '-4')]",[28.0],"['B', 'B']",FUGA,2.0,False
+52,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,1440.0,"['178/1.0', '181/1.0']",['P-8'],"[1440.0, 1464.0]","[('-2', '-2', '2', '-2')]",[24.0],"['A', 'Q']",FUGA,2.0,False
+53,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,1444.0,"['178/3.0', '181/4.0']",['P-8'],"[1444.0, 1470.0]","[('-2', '-2', '2', '2')]",[26.0],"['C', 'T']",FUGA,2.0,False
+54,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,1851.0,"['229/2.5', '232/4.0']",['M-3'],"[1851.0, 1878.0]","[('2', '-3', '2', '-3')]",[27.0],"['T', 'B']",FUGA,2.0,False
+55,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Credo,1956.0,"['242/3.0', '243/1.0']",['P-4'],"[1956.0, 1960.0]","[('-2', '2', '2', '-2')]",[4.0],"['C', 'A']",FUGA,2.0,False
+56,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Sanctus,0.0,"['1/1.0', '6/1.0']",['P-11'],"[0.0, 40.0]","[('-2', '2', '2', '2')]",[40.0],"['Altus', 'Bassus']",FUGA,2.0,False
+57,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Sanctus,400.0,['51/1.0'],['P1'],"[400.0, 400.0]","[('-5', '3', '2', '2')]",[0.0],"['Quintus', 'Tenor']",FUGA,2.0,False
+58,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Sanctus,446.0,"['56/4.0', '61/4.0', '62/3.0']","['P1', 'P1']","[446.0, 486.0, 492.0]","[('5', '-2', '-2', '-2')]","[40.0, 6.0]","['Tenor', 'Tenor', 'Quintus']",FUGA,3.0,False
+59,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Sanctus,568.0,"['72/1.0', '76/3.0', '80/2.0', '81/1.0', '83/1.0']","['P-8', 'P12', 'P-5', 'P-4']","[568.0, 624.0, 668.0, 676.0, 708.0]","[('4', '-2', '-2', '2')]","[56.0, 44.0, 8.0, 32.0]","['Altus', 'Tenor', 'Cantus', 'Altus', 'Quintus']",FUGA,5.0,False
+60,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Sanctus,572.0,"['72/2.0', '73/1.0', '77/1.0']","['P8', 'P-15']","[572.0, 580.0, 628.0]","[('4', '-2', '-2', '4')]","[8.0, 48.0]","['Quintus', 'Cantus', 'Bassus']",FUGA,3.0,False
+61,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Sanctus,748.0,"['87/1.0', '87/1.0']",['P-4'],"[748.0, 756.0]","[('-2', '-2', '-2', '2')]",[8.0],"['Cantus', 'Altus']",FUGA,2.0,False
+62,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Sanctus,980.0,"['106/2.0', '110/2.0']",['m-10'],"[980.0, 1028.0]","[('-2', '-3', '2', '-2')]",[48.0],"['Cantus', 'Bassus']",FUGA,2.0,False
+63,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Agnus dei,0.0,"['1/1.0', '1/3.0', '5/1.0', '5/3.0']","['P-4', 'P-5', 'P-4']","[0.0, 4.0, 32.0, 36.0]","[('3', '-2', '-2', '2')]","[4.0, 28.0, 4.0]","['Cantus Primus', 'Cantus Secundus', 'Quintus', 'Tenor']",ID,4.0,False
+64,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Agnus dei,4.0,"['1/3.0', '5/3.0']",['P-8'],"[4.0, 36.0]","[('5', '-2', '-2', '-2')]",[32.0],"['Altus', 'Bassus']",FUGA,2.0,False
+65,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Agnus dei,62.0,"['8/4.0', '9/1.0']",['P8'],"[62.0, 64.0]","[('-2', '-2', '-2', '-2')]",[2.0],"['Altus', 'Cantus Secundus']",FUGA,2.0,False
+66,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Agnus dei,64.0,"['9/1.0', '13/1.0']",['P-8'],"[64.0, 96.0]","[('-2', '2', '2', '2')]",[32.0],"['Cantus Primus', 'Quintus']",FUGA,2.0,False
+67,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Agnus dei,124.0,"['16/3.0', '20/3.0']",['P-8'],"[124.0, 156.0]","[('2', '-3', '-2', '-2')]",[32.0],"['Cantus Primus', 'Quintus']",FUGA,2.0,False
+68,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Agnus dei,184.0,"['24/1.0', '28/1.0']",['P-8'],"[184.0, 216.0]","[('-3', '2', '-3', '2')]",[32.0],"['Cantus Primus', 'Quintus']",FUGA,2.0,False
+69,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Agnus dei,230.0,"['29/4.0', '33/4.0']",['P-8'],"[230.0, 262.0]","[('4', '-3', '4', '-2')]",[32.0],"['Cantus Primus', 'Quintus']",FUGA,2.0,False
+70,,,Annibale Padovano,MIssa Ultimi mieie sospiri: Agnus dei,324.0,"['41/3.0', '45/3.0']",['P-8'],"[324.0, 356.0]","[('3', '2', '-2', '-2')]",[32.0],"['Cantus Primus', 'Quintus']",FUGA,2.0,False
