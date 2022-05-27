@@ -1,9 +1,0 @@
-,Validation,Comments,Composer,Title,First_Offset,Measures_Beats,Melodic_Entry_Intervals,Offsets,Soggetti,Time_Entry_Intervals,Voices,Presentation_Type,Number_Entries,Flexed_Entries
-0,,,Roland de  Lassus,Domine Dominus noster,0.0,"['1/1.0', '7/2.0']",['P4'],"[0.0, 50.0]","[('-2', '2', '-3', '2')]",[50.0],"['Altus', 'Sexta']",FUGA,2.0,False
-1,,,Roland de Lassus,Missa Domine dominus noster: Kyrie,21.0,"['3/3.5', '10/1.5']",['P1'],"[21.0, 73.0]","[('-2', '2', '2', '2')]",[52.0],"['Altus', 'Altus']",FUGA,2.0,False
-2,,,Roland de Lassus,Missa Domine dominus noster: Gloria,0.0,"['1/1.0', '5/2.0']",['P11'],"[0.0, 34.0]","[('3', '-2', '-2', '-2')]",[34.0],"['Tenor I', 'Superius II']",FUGA,2.0,False
-3,,,Roland de Lassus,Missa Domine dominus noster: Gloria,208.0,"['27/1.0', '30/2.0']",['P1'],"[208.0, 234.0]","[('4', '2', '-3', '-4')]",[26.0],"['Bassus', 'Bassus']",FUGA,2.0,False
-4,,,Roland de Lassus,Missa Domine dominus noster: Gloria,254.0,"['32/4.0', '36/3.0', '45/1.0']","['P-8', 'M2']","[254.0, 284.0, 352.0]","[('-2', '-2', '2', '2')]","[30.0, 68.0]","['Superius I', 'Tenor Ii', 'Tenor Ii']",FUGA,3.0,False
-5,,,Roland de Lassus,Missa Domine dominus noster: Credo,232.0,['30/1.0'],['P-4'],"[232.0, 232.0]","[('2', '2', '2', '-2')]",[0.0],"['Tenor I', 'Tenor II']",FUGA,2.0,False
-6,,,Roland de Lassus,Missa Domine dominus noster: Sanctus,0.0,['1/1.0'],['m-3'],"[0.0, 0.0]","[('-2', '-2', '-2', '-3')]",[0.0],"['Superius II', 'Altus']",FUGA,2.0,False
-7,,,Roland de Lassus,Missa Domine dominus noster: Sanctus,4.0,"['1/3.0', '7/2.0', '15/2.0']","['P-8', 'm6']","[4.0, 50.0, 114.0]","[('-2', '-2', '-2', '2')]","[46.0, 64.0]","['Superius I', 'Tenor I', 'Superius II']",FUGA,3.0,False
