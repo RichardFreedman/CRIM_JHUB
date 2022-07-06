@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 1800;
+            height: 1400;
+            background-color: white;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"font": {"color": "black"}, "group": 0, "id": "P4_P-12_M9_-3_3_-2_-2", "label": "P4_P-12_M9_-3_3_-2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 0, "id": "P4_P-12_M9_P4_-3_3_-2_-2", "label": "P4_P-12_M9_P4_-3_3_-2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 0, "id": "P4_P-12_-3_3_-2_-2", "label": "P4_P-12_-3_3_-2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 0, "id": "P-12_M9_P4_-3_3_-2_-2", "label": "P-12_M9_P4_-3_3_-2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 0, "id": "P-12_M9_-3_3_-2_-2", "label": "P-12_M9_-3_3_-2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 0, "id": "M9_P4_-3_3_-2_-2", "label": "M9_P4_-3_3_-2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 2, "id": "P-4_P-5_-2_-2_-2_-2", "label": "P-4_P-5_-2_-2_-2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 2, "id": "P8_M-13_4_2_2_2", "label": "P8_M-13_4_2_2_2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 2, "id": "M-9_P-5_4_2_2_2", "label": "M-9_P-5_4_2_2_2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 2, "id": "M-9_P-5_M9_4_2_2_2", "label": "M-9_P-5_M9_4_2_2_2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 2, "id": "P-5_M9_4_2_2_2", "label": "P-5_M9_4_2_2_2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 2, "id": "P12_P-4_4_2_2_2", "label": "P12_P-4_4_2_2_2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 3, "id": "P-12_P12_-2_2_3_-2", "label": "P-12_P12_-2_2_3_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 3, "id": "P8_P-12_-3_3_2_-2", "label": "P8_P-12_-3_3_2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 3, "id": "P8_P-12_P8_-3_3_2_-2", "label": "P8_P-12_P8_-3_3_2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 3, "id": "P-12_P8_-3_3_2_-2", "label": "P-12_P8_-3_3_2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 3, "id": "P1_P-8_-2_2_3_-2", "label": "P1_P-8_-2_2_3_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 3, "id": "P-4_M-9_-2_2_3_-2", "label": "P-4_M-9_-2_2_3_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 3, "id": "P1_P-8_P5_-2_2_3_-2", "label": "P1_P-8_P5_-2_2_3_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 3, "id": "P-8_P5_-2_2_3_-2", "label": "P-8_P5_-2_2_3_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 5, "id": "P-5_P8_-2_2_-3_2", "label": "P-5_P8_-2_2_-3_2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 5, "id": "P-4_P-5_-3_3_2_-2", "label": "P-4_P-5_-3_3_2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 5, "id": "P-4_P4_-2_2_3_-2", "label": "P-4_P4_-2_2_3_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 5, "id": "P-5_P5_-2_2_3_-2", "label": "P-5_P5_-2_2_3_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 5, "id": "P12_P1_-2_2_3_-2", "label": "P12_P1_-2_2_3_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 5, "id": "P-5_P1_-3_2_2_2", "label": "P-5_P1_-3_2_2_2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 5, "id": "P-5_P1_P-4_-3_2_2_2", "label": "P-5_P1_P-4_-3_2_2_2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 5, "id": "P1_P-4_-3_2_2_2", "label": "P1_P-4_-3_2_2_2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 5, "id": "P-5_P8_-3_3_2_-2", "label": "P-5_P8_-3_3_2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 5, "id": "P-5_P5_-3_2_2_-2", "label": "P-5_P5_-3_2_2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 5, "id": "P1_P8_-3_2_2_-2", "label": "P1_P8_-3_2_2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 4, "id": "P8_P-8_-3_3_-2_-2", "label": "P8_P-8_-3_3_-2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 4, "id": "P1_P-5_-3_3_-2_-2", "label": "P1_P-5_-3_3_-2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 1, "id": "P4_P-4_-3_2_2_-2", "label": "P4_P-4_-3_2_2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 1, "id": "P-8_P4_-3_2_2_-2", "label": "P-8_P4_-3_2_2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 1, "id": "P-5_P8_-3_2_2_-2", "label": "P-5_P8_-3_2_2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 1, "id": "M-9_P15_-3_3_-2_-2", "label": "M-9_P15_-3_3_-2_-2", "shape": "dot", "size": 10}, {"font": {"color": "black"}, "group": 1, "id": "P5_P-8_-2_2_3_-2", "label": "P5_P-8_-2_2_3_-2", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "P4_P-12_M9_-3_3_-2_-2", "to": "P4_P-12_M9_P4_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-12_M9_-3_3_-2_-2", "to": "P4_P-12_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-12_M9_-3_3_-2_-2", "to": "P-12_M9_P4_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-12_M9_-3_3_-2_-2", "to": "P-12_M9_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-12_M9_-3_3_-2_-2", "to": "M9_P4_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-12_M9_P4_-3_3_-2_-2", "to": "P4_P-12_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-12_M9_P4_-3_3_-2_-2", "to": "P-12_M9_P4_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-12_M9_P4_-3_3_-2_-2", "to": "P-12_M9_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-12_M9_P4_-3_3_-2_-2", "to": "M9_P4_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-12_-3_3_-2_-2", "to": "P-12_M9_P4_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-12_-3_3_-2_-2", "to": "P-12_M9_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-12_-3_3_-2_-2", "to": "M9_P4_-3_3_-2_-2", "weight": 1}, {"from": "P-12_M9_P4_-3_3_-2_-2", "to": "P-12_M9_-3_3_-2_-2", "weight": 1}, {"from": "P-12_M9_P4_-3_3_-2_-2", "to": "M9_P4_-3_3_-2_-2", "weight": 1}, {"from": "P-12_M9_-3_3_-2_-2", "to": "M9_P4_-3_3_-2_-2", "weight": 1}, {"from": "P-4_P-5_-2_-2_-2_-2", "to": "P8_M-13_4_2_2_2", "weight": 1}, {"from": "P-4_P-5_-2_-2_-2_-2", "to": "M-9_P-5_4_2_2_2", "weight": 1}, {"from": "P-4_P-5_-2_-2_-2_-2", "to": "M-9_P-5_M9_4_2_2_2", "weight": 1}, {"from": "P-4_P-5_-2_-2_-2_-2", "to": "P-5_M9_4_2_2_2", "weight": 1}, {"from": "P-4_P-5_-2_-2_-2_-2", "to": "P12_P-4_4_2_2_2", "weight": 1}, {"from": "P8_M-13_4_2_2_2", "to": "M-9_P-5_4_2_2_2", "weight": 1}, {"from": "P8_M-13_4_2_2_2", "to": "M-9_P-5_M9_4_2_2_2", "weight": 1}, {"from": "P8_M-13_4_2_2_2", "to": "P-5_M9_4_2_2_2", "weight": 1}, {"from": "P8_M-13_4_2_2_2", "to": "P12_P-4_4_2_2_2", "weight": 1}, {"from": "M-9_P-5_4_2_2_2", "to": "M-9_P-5_M9_4_2_2_2", "weight": 1}, {"from": "M-9_P-5_4_2_2_2", "to": "P-5_M9_4_2_2_2", "weight": 1}, {"from": "M-9_P-5_4_2_2_2", "to": "P12_P-4_4_2_2_2", "weight": 1}, {"from": "M-9_P-5_M9_4_2_2_2", "to": "P-5_M9_4_2_2_2", "weight": 1}, {"from": "M-9_P-5_M9_4_2_2_2", "to": "P12_P-4_4_2_2_2", "weight": 1}, {"from": "P-5_M9_4_2_2_2", "to": "P12_P-4_4_2_2_2", "weight": 1}, {"from": "P-12_P12_-2_2_3_-2", "to": "P8_P-12_-3_3_2_-2", "weight": 1}, {"from": "P-12_P12_-2_2_3_-2", "to": "P8_P-12_P8_-3_3_2_-2", "weight": 1}, {"from": "P-12_P12_-2_2_3_-2", "to": "P-12_P8_-3_3_2_-2", "weight": 1}, {"from": "P-12_P12_-2_2_3_-2", "to": "P1_P-8_-2_2_3_-2", "weight": 1}, {"from": "P-12_P12_-2_2_3_-2", "to": "P-4_M-9_-2_2_3_-2", "weight": 1}, {"from": "P-12_P12_-2_2_3_-2", "to": "P1_P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P-12_P12_-2_2_3_-2", "to": "P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P8_P-12_-3_3_2_-2", "to": "P8_P-12_P8_-3_3_2_-2", "weight": 1}, {"from": "P8_P-12_-3_3_2_-2", "to": "P-12_P8_-3_3_2_-2", "weight": 1}, {"from": "P8_P-12_-3_3_2_-2", "to": "P1_P-8_-2_2_3_-2", "weight": 1}, {"from": "P8_P-12_-3_3_2_-2", "to": "P-4_M-9_-2_2_3_-2", "weight": 1}, {"from": "P8_P-12_-3_3_2_-2", "to": "P1_P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P8_P-12_-3_3_2_-2", "to": "P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P8_P-12_P8_-3_3_2_-2", "to": "P-12_P8_-3_3_2_-2", "weight": 1}, {"from": "P8_P-12_P8_-3_3_2_-2", "to": "P1_P-8_-2_2_3_-2", "weight": 1}, {"from": "P8_P-12_P8_-3_3_2_-2", "to": "P-4_M-9_-2_2_3_-2", "weight": 1}, {"from": "P8_P-12_P8_-3_3_2_-2", "to": "P1_P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P8_P-12_P8_-3_3_2_-2", "to": "P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P-12_P8_-3_3_2_-2", "to": "P1_P-8_-2_2_3_-2", "weight": 1}, {"from": "P-12_P8_-3_3_2_-2", "to": "P-4_M-9_-2_2_3_-2", "weight": 1}, {"from": "P-12_P8_-3_3_2_-2", "to": "P1_P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P-12_P8_-3_3_2_-2", "to": "P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P-4_M-9_-2_2_3_-2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P1_P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P-5_P8_-2_2_-3_2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P-4_P-5_-3_3_2_-2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P-4_P4_-2_2_3_-2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P-5_P5_-2_2_3_-2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P12_P1_-2_2_3_-2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P-5_P1_-3_2_2_2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P-5_P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P-5_P8_-3_3_2_-2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P-5_P5_-3_2_2_-2", "weight": 1}, {"from": "P1_P-8_-2_2_3_-2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P-4_M-9_-2_2_3_-2", "to": "P1_P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P-4_M-9_-2_2_3_-2", "to": "P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P1_P-8_P5_-2_2_3_-2", "to": "P-8_P5_-2_2_3_-2", "weight": 1}, {"from": "P-8_P5_-2_2_3_-2", "to": "P-5_P8_-2_2_-3_2", "weight": 1}, {"from": "P-8_P5_-2_2_3_-2", "to": "P-4_P-5_-3_3_2_-2", "weight": 1}, {"from": "P-8_P5_-2_2_3_-2", "to": "P-4_P4_-2_2_3_-2", "weight": 1}, {"from": "P-8_P5_-2_2_3_-2", "to": "P-5_P5_-2_2_3_-2", "weight": 1}, {"from": "P-8_P5_-2_2_3_-2", "to": "P12_P1_-2_2_3_-2", "weight": 1}, {"from": "P-8_P5_-2_2_3_-2", "to": "P-5_P1_-3_2_2_2", "weight": 1}, {"from": "P-8_P5_-2_2_3_-2", "to": "P-5_P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-8_P5_-2_2_3_-2", "to": "P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-8_P5_-2_2_3_-2", "to": "P-5_P8_-3_3_2_-2", "weight": 1}, {"from": "P-8_P5_-2_2_3_-2", "to": "P-5_P5_-3_2_2_-2", "weight": 1}, {"from": "P-8_P5_-2_2_3_-2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P8_P-8_-3_3_-2_-2", "to": "P1_P-5_-3_3_-2_-2", "weight": 1}, {"from": "P-5_P8_-2_2_-3_2", "to": "P-4_P-5_-3_3_2_-2", "weight": 1}, {"from": "P-5_P8_-2_2_-3_2", "to": "P-4_P4_-2_2_3_-2", "weight": 1}, {"from": "P-5_P8_-2_2_-3_2", "to": "P-5_P5_-2_2_3_-2", "weight": 1}, {"from": "P-5_P8_-2_2_-3_2", "to": "P12_P1_-2_2_3_-2", "weight": 1}, {"from": "P-5_P8_-2_2_-3_2", "to": "P-5_P1_-3_2_2_2", "weight": 1}, {"from": "P-5_P8_-2_2_-3_2", "to": "P-5_P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-5_P8_-2_2_-3_2", "to": "P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-5_P8_-2_2_-3_2", "to": "P-5_P8_-3_3_2_-2", "weight": 1}, {"from": "P-5_P8_-2_2_-3_2", "to": "P-5_P5_-3_2_2_-2", "weight": 1}, {"from": "P-5_P8_-2_2_-3_2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P-4_P-5_-3_3_2_-2", "to": "P-4_P4_-2_2_3_-2", "weight": 1}, {"from": "P-4_P-5_-3_3_2_-2", "to": "P-5_P5_-2_2_3_-2", "weight": 1}, {"from": "P-4_P-5_-3_3_2_-2", "to": "P12_P1_-2_2_3_-2", "weight": 1}, {"from": "P-4_P-5_-3_3_2_-2", "to": "P-5_P1_-3_2_2_2", "weight": 1}, {"from": "P-4_P-5_-3_3_2_-2", "to": "P-5_P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-4_P-5_-3_3_2_-2", "to": "P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-4_P-5_-3_3_2_-2", "to": "P-5_P8_-3_3_2_-2", "weight": 1}, {"from": "P-4_P-5_-3_3_2_-2", "to": "P-5_P5_-3_2_2_-2", "weight": 1}, {"from": "P-4_P-5_-3_3_2_-2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P-4_P4_-2_2_3_-2", "to": "P-5_P5_-2_2_3_-2", "weight": 1}, {"from": "P-4_P4_-2_2_3_-2", "to": "P12_P1_-2_2_3_-2", "weight": 1}, {"from": "P-4_P4_-2_2_3_-2", "to": "P-5_P1_-3_2_2_2", "weight": 1}, {"from": "P-4_P4_-2_2_3_-2", "to": "P-5_P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-4_P4_-2_2_3_-2", "to": "P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-4_P4_-2_2_3_-2", "to": "P-5_P8_-3_3_2_-2", "weight": 1}, {"from": "P-4_P4_-2_2_3_-2", "to": "P-5_P5_-3_2_2_-2", "weight": 1}, {"from": "P-4_P4_-2_2_3_-2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P-5_P5_-2_2_3_-2", "to": "P12_P1_-2_2_3_-2", "weight": 1}, {"from": "P-5_P5_-2_2_3_-2", "to": "P-5_P1_-3_2_2_2", "weight": 1}, {"from": "P-5_P5_-2_2_3_-2", "to": "P-5_P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-5_P5_-2_2_3_-2", "to": "P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-5_P5_-2_2_3_-2", "to": "P-5_P8_-3_3_2_-2", "weight": 1}, {"from": "P-5_P5_-2_2_3_-2", "to": "P-5_P5_-3_2_2_-2", "weight": 1}, {"from": "P-5_P5_-2_2_3_-2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P12_P1_-2_2_3_-2", "to": "P-5_P1_-3_2_2_2", "weight": 1}, {"from": "P12_P1_-2_2_3_-2", "to": "P-5_P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P12_P1_-2_2_3_-2", "to": "P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P12_P1_-2_2_3_-2", "to": "P-5_P8_-3_3_2_-2", "weight": 1}, {"from": "P12_P1_-2_2_3_-2", "to": "P-5_P5_-3_2_2_-2", "weight": 1}, {"from": "P12_P1_-2_2_3_-2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P-5_P1_-3_2_2_2", "to": "P-5_P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-5_P1_-3_2_2_2", "to": "P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-5_P1_-3_2_2_2", "to": "P-5_P8_-3_3_2_-2", "weight": 1}, {"from": "P-5_P1_-3_2_2_2", "to": "P-5_P5_-3_2_2_-2", "weight": 1}, {"from": "P-5_P1_-3_2_2_2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P-5_P1_P-4_-3_2_2_2", "to": "P1_P-4_-3_2_2_2", "weight": 1}, {"from": "P-5_P1_P-4_-3_2_2_2", "to": "P-5_P8_-3_3_2_-2", "weight": 1}, {"from": "P-5_P1_P-4_-3_2_2_2", "to": "P-5_P5_-3_2_2_-2", "weight": 1}, {"from": "P-5_P1_P-4_-3_2_2_2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P1_P-4_-3_2_2_2", "to": "P-5_P8_-3_3_2_-2", "weight": 1}, {"from": "P1_P-4_-3_2_2_2", "to": "P-5_P5_-3_2_2_-2", "weight": 1}, {"from": "P1_P-4_-3_2_2_2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P-5_P8_-3_3_2_-2", "to": "P-5_P5_-3_2_2_-2", "weight": 1}, {"from": "P-5_P8_-3_3_2_-2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P-5_P5_-3_2_2_-2", "to": "P1_P8_-3_2_2_-2", "weight": 1}, {"from": "P4_P-4_-3_2_2_-2", "to": "P-8_P4_-3_2_2_-2", "weight": 1}, {"from": "P4_P-4_-3_2_2_-2", "to": "P-5_P8_-3_2_2_-2", "weight": 1}, {"from": "P4_P-4_-3_2_2_-2", "to": "M-9_P15_-3_3_-2_-2", "weight": 1}, {"from": "P4_P-4_-3_2_2_-2", "to": "P5_P-8_-2_2_3_-2", "weight": 1}, {"from": "P-8_P4_-3_2_2_-2", "to": "P-5_P8_-3_2_2_-2", "weight": 1}, {"from": "P-8_P4_-3_2_2_-2", "to": "M-9_P15_-3_3_-2_-2", "weight": 1}, {"from": "P-8_P4_-3_2_2_-2", "to": "P5_P-8_-2_2_3_-2", "weight": 1}, {"from": "P-5_P8_-3_2_2_-2", "to": "M-9_P15_-3_3_-2_-2", "weight": 1}, {"from": "P-5_P8_-3_2_2_-2", "to": "P5_P-8_-2_2_3_-2", "weight": 1}, {"from": "M-9_P15_-3_3_-2_-2", "to": "P5_P-8_-2_2_3_-2", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
