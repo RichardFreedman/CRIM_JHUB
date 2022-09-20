@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 1800;
+            height: 1400;
+            background-color: black;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"font": {"color": "white"}, "group": 0, "id": "P4_P-4", "label": "P4_P-4", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003cli\u003eComposer: Giovanni Pierluigi da Palestrina\u003cbr\u003e\n                                Title: Veni sponsa Christi\u003cbr\u003e\n                                Offset: 150.0\u003c/li\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "group": 0, "id": "P-8_P4", "label": "P-8_P4", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003cli\u003eComposer: Giovanni Pierluigi da Palestrina\u003cbr\u003e\n                                Title: Veni sponsa Christi\u003cbr\u003e\n                                Offset: 166.0\u003c/li\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "group": 0, "id": "P-5_P8", "label": "P-5_P8", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003cli\u003eComposer: Giovanni Pierluigi da Palestrina\u003cbr\u003e\n                                Title: Veni sponsa Christi\u003cbr\u003e\n                                Offset: 198.0\u003c/li\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "group": 0, "id": "M-9_P15", "label": "M-9_P15", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003cli\u003eComposer: Giovanni Pierluigi da Palestrina\u003cbr\u003e\n                                Title: Veni sponsa Christi\u003cbr\u003e\n                                Offset: 298.0\u003c/li\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "group": 0, "id": "P5_P-8", "label": "P5_P-8", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003cli\u003eComposer: Giovanni Pierluigi da Palestrina\u003cbr\u003e\n                                Title: Veni sponsa Christi\u003cbr\u003e\n                                Offset: 394.0\u003c/li\u003e\u003c/ul\u003e"}]);
+        edges = new vis.DataSet([{"from": "P4_P-4", "to": "P-8_P4", "weight": 1}, {"from": "P4_P-4", "to": "P-5_P8", "weight": 1}, {"from": "P4_P-4", "to": "M-9_P15", "weight": 1}, {"from": "P4_P-4", "to": "P5_P-8", "weight": 1}, {"from": "P-8_P4", "to": "P-5_P8", "weight": 1}, {"from": "P-8_P4", "to": "M-9_P15", "weight": 1}, {"from": "P-8_P4", "to": "P5_P-8", "weight": 1}, {"from": "P-5_P8", "to": "M-9_P15", "weight": 1}, {"from": "P-5_P8", "to": "P5_P-8", "weight": 1}, {"from": "M-9_P15", "to": "P5_P-8", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
