@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 1800;
+            height: 1400;
+            background-color: black;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"font": {"color": "white"}, "id": "-", "label": "-", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Clausula Vera_G", "label": "Clausula Vera_G", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Evaded Clausula Vera_G", "label": "Evaded Clausula Vera_G", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Clausula Vera_D", "label": "Clausula Vera_D", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Authentic_G", "label": "Authentic_G", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Evaded Authentic_C", "label": "Evaded Authentic_C", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Abandoned Clausula Vera_C", "label": "Abandoned Clausula Vera_C", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Evaded Clausula Vera_C", "label": "Evaded Clausula Vera_C", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Authentic_C", "label": "Authentic_C", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Authentic_A", "label": "Authentic_A", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Evaded Clausula Vera_A", "label": "Evaded Clausula Vera_A", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Altizans Only_A", "label": "Altizans Only_A", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Clausula Vera_A", "label": "Clausula Vera_A", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Evaded Authentic_D", "label": "Evaded Authentic_D", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Authentic_D", "label": "Authentic_D", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Altizans Only_D", "label": "Altizans Only_D", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Evaded Authentic_A", "label": "Evaded Authentic_A", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Evaded Authentic_G", "label": "Evaded Authentic_G", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}, {"font": {"color": "white"}, "id": "Phrygian Clausula Vera_A", "label": "Phrygian Clausula Vera_A", "shape": "dot", "size": 10, "title": "\u003cul\u003e\u003c/ul\u003e"}]);
+        edges = new vis.DataSet([{"arrows": "to", "from": "-", "to": "Clausula Vera_G", "weight": 1}, {"arrows": "to", "from": "Clausula Vera_G", "to": "Evaded Clausula Vera_G", "weight": 1}, {"arrows": "to", "from": "Clausula Vera_G", "to": "Clausula Vera_G", "weight": 1}, {"arrows": "to", "from": "Clausula Vera_G", "to": "Clausula Vera_D", "weight": 1}, {"arrows": "to", "from": "Evaded Clausula Vera_G", "to": "Authentic_G", "weight": 1}, {"arrows": "to", "from": "Evaded Clausula Vera_G", "to": "Evaded Authentic_C", "weight": 1}, {"arrows": "to", "from": "Authentic_G", "to": "Abandoned Clausula Vera_C", "weight": 1}, {"arrows": "to", "from": "Authentic_G", "to": "Evaded Clausula Vera_G", "weight": 1}, {"arrows": "to", "from": "Abandoned Clausula Vera_C", "to": "Evaded Clausula Vera_C", "weight": 1}, {"arrows": "to", "from": "Evaded Clausula Vera_C", "to": "Authentic_C", "weight": 1}, {"arrows": "to", "from": "Evaded Clausula Vera_C", "to": "Authentic_A", "weight": 1}, {"arrows": "to", "from": "Authentic_C", "to": "Evaded Clausula Vera_A", "weight": 1}, {"arrows": "to", "from": "Evaded Clausula Vera_A", "to": "Altizans Only_A", "weight": 1}, {"arrows": "to", "from": "Altizans Only_A", "to": "Clausula Vera_D", "weight": 1}, {"arrows": "to", "from": "Clausula Vera_D", "to": "Clausula Vera_A", "weight": 1}, {"arrows": "to", "from": "Clausula Vera_D", "to": "Authentic_G", "weight": 1}, {"arrows": "to", "from": "Clausula Vera_D", "to": "Evaded Authentic_D", "weight": 1}, {"arrows": "to", "from": "Clausula Vera_A", "to": "Authentic_D", "weight": 1}, {"arrows": "to", "from": "Clausula Vera_A", "to": "Clausula Vera_A", "weight": 1}, {"arrows": "to", "from": "Clausula Vera_A", "to": "Clausula Vera_D", "weight": 1}, {"arrows": "to", "from": "Authentic_D", "to": "Altizans Only_D", "weight": 1}, {"arrows": "to", "from": "Altizans Only_D", "to": "Evaded Authentic_A", "weight": 1}, {"arrows": "to", "from": "Evaded Authentic_A", "to": "Authentic_G", "weight": 1}, {"arrows": "to", "from": "Evaded Authentic_C", "to": "Evaded Authentic_G", "weight": 1}, {"arrows": "to", "from": "Evaded Authentic_G", "to": "Evaded Clausula Vera_C", "weight": 1}, {"arrows": "to", "from": "Authentic_A", "to": "Clausula Vera_A", "weight": 1}, {"arrows": "to", "from": "Evaded Authentic_D", "to": "Phrygian Clausula Vera_A", "weight": 1}, {"arrows": "to", "from": "Phrygian Clausula Vera_A", "to": "Authentic_G", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
