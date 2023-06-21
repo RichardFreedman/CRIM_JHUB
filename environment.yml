@@ -1,0 +1,25 @@
+name: crim-examples
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.9
+  - altair==4.2.2
+  - beautifulsoup4==4.12.2
+  - ipython==8.12.0
+  - ipywidgets==8.0.4
+  - lxml==4.9.2
+  - matplotlib==3.7.1
+  - networkx==2.8.4
+  - numpy==1.24.3
+  - pandas==1.5.3
+  - pip==23.0.1
+  - plotly==5.14.1
+  - python-louvain==0.16
+  - pyvis==0.3.1
+  - requests==2.29.0
+  - seaborn==0.12.2
+  - textdistance==4.5.0
+  - pip:
+    - git+https://github.com/HCDigitalScholarship/intervals@846525065733ab54b8dcc9126121632b7da2797c
+    - verovio==3.15.0

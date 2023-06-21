@@ -1,0 +1,14 @@
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          environment-file: environment.yml
+          activate-environment: crim-examples
+      - shell: bash -el {0}
+        run: |
+          pip install pytest{-xdist,} nbmake
+          pytest --nbmake -n auto *.ipynb
