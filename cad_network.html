@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 800;
+            height: 800;
+            background-color: black;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"font": {"color": "white"}, "group": 0, "id": "Daser Missa Ecce nunc Benedicite: Sanctus", "label": "Daser Missa Ecce nunc Benedicite: Sanctus", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 0, "id": "Daser Missa Ecce nunc Benedicite:  Credo", "label": "Daser Missa Ecce nunc Benedicite:  Credo", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 0, "id": "Ecce nunc benedicite", "label": "Ecce nunc benedicite", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 0, "id": "Lasso Missa Ecce nunc benedicite: Agnus", "label": "Lasso Missa Ecce nunc benedicite: Agnus", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 1, "id": "Daser Missa Ecce nunc Benedicite: Gloria", "label": "Daser Missa Ecce nunc Benedicite: Gloria", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 2, "id": "Daser Missa Ecce nunc Benedicite:  Kyrie", "label": "Daser Missa Ecce nunc Benedicite:  Kyrie", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 1, "id": "Lasso Missa Ecce nunc benedicite: Gloria", "label": "Lasso Missa Ecce nunc benedicite: Gloria", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 2, "id": "Lasso Missa Ecce nunc benedicite: Sanctus", "label": "Lasso Missa Ecce nunc benedicite: Sanctus", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 2, "id": "Lasso Missa Ecce nunc benedicite: Credo", "label": "Lasso Missa Ecce nunc benedicite: Credo", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 2, "id": "Lasso Missa Ecce nunc benedicite:  Kyrie", "label": "Lasso Missa Ecce nunc benedicite:  Kyrie", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "Daser Missa Ecce nunc Benedicite: Sanctus", "to": "Daser Missa Ecce nunc Benedicite:  Credo", "weight": 4, "width": 4}, {"from": "Daser Missa Ecce nunc Benedicite: Sanctus", "to": "Ecce nunc benedicite", "weight": 2, "width": 2}, {"from": "Daser Missa Ecce nunc Benedicite: Sanctus", "to": "Lasso Missa Ecce nunc benedicite: Agnus", "weight": 2, "width": 2}, {"from": "Daser Missa Ecce nunc Benedicite: Sanctus", "to": "Daser Missa Ecce nunc Benedicite: Gloria", "weight": 2, "width": 2}, {"from": "Daser Missa Ecce nunc Benedicite: Sanctus", "to": "Daser Missa Ecce nunc Benedicite:  Kyrie", "weight": 1, "width": 1}, {"from": "Daser Missa Ecce nunc Benedicite: Sanctus", "to": "Lasso Missa Ecce nunc benedicite: Gloria", "weight": 1, "width": 1}, {"from": "Daser Missa Ecce nunc Benedicite: Sanctus", "to": "Lasso Missa Ecce nunc benedicite: Sanctus", "weight": 1, "width": 1}, {"from": "Daser Missa Ecce nunc Benedicite:  Credo", "to": "Ecce nunc benedicite", "weight": 3, "width": 3}, {"from": "Daser Missa Ecce nunc Benedicite:  Credo", "to": "Daser Missa Ecce nunc Benedicite: Gloria", "weight": 2, "width": 2}, {"from": "Daser Missa Ecce nunc Benedicite:  Credo", "to": "Daser Missa Ecce nunc Benedicite:  Kyrie", "weight": 1, "width": 1}, {"from": "Daser Missa Ecce nunc Benedicite:  Credo", "to": "Lasso Missa Ecce nunc benedicite: Credo", "weight": 1, "width": 1}, {"from": "Daser Missa Ecce nunc Benedicite:  Credo", "to": "Lasso Missa Ecce nunc benedicite: Agnus", "weight": 1, "width": 1}, {"from": "Lasso Missa Ecce nunc benedicite:  Kyrie", "to": "Lasso Missa Ecce nunc benedicite: Credo", "weight": 3, "width": 3}, {"from": "Lasso Missa Ecce nunc benedicite:  Kyrie", "to": "Daser Missa Ecce nunc Benedicite:  Kyrie", "weight": 2, "width": 2}, {"from": "Lasso Missa Ecce nunc benedicite:  Kyrie", "to": "Daser Missa Ecce nunc Benedicite: Gloria", "weight": 1, "width": 1}, {"from": "Lasso Missa Ecce nunc benedicite:  Kyrie", "to": "Lasso Missa Ecce nunc benedicite: Sanctus", "weight": 1, "width": 1}, {"from": "Lasso Missa Ecce nunc benedicite:  Kyrie", "to": "Lasso Missa Ecce nunc benedicite: Agnus", "weight": 1, "width": 1}, {"from": "Lasso Missa Ecce nunc benedicite:  Kyrie", "to": "Ecce nunc benedicite", "weight": 1, "width": 1}, {"from": "Lasso Missa Ecce nunc benedicite: Credo", "to": "Lasso Missa Ecce nunc benedicite: Sanctus", "weight": 2, "width": 2}, {"from": "Lasso Missa Ecce nunc benedicite: Credo", "to": "Lasso Missa Ecce nunc benedicite: Agnus", "weight": 1, "width": 1}, {"from": "Lasso Missa Ecce nunc benedicite: Credo", "to": "Ecce nunc benedicite", "weight": 1, "width": 1}, {"from": "Lasso Missa Ecce nunc benedicite: Credo", "to": "Daser Missa Ecce nunc Benedicite:  Kyrie", "weight": 1, "width": 1}, {"from": "Ecce nunc benedicite", "to": "Daser Missa Ecce nunc Benedicite: Gloria", "weight": 2, "width": 2}, {"from": "Ecce nunc benedicite", "to": "Lasso Missa Ecce nunc benedicite: Sanctus", "weight": 2, "width": 2}, {"from": "Ecce nunc benedicite", "to": "Lasso Missa Ecce nunc benedicite: Agnus", "weight": 2, "width": 2}, {"from": "Ecce nunc benedicite", "to": "Daser Missa Ecce nunc Benedicite:  Kyrie", "weight": 1, "width": 1}, {"from": "Daser Missa Ecce nunc Benedicite: Gloria", "to": "Lasso Missa Ecce nunc benedicite: Gloria", "weight": 2, "width": 2}, {"from": "Daser Missa Ecce nunc Benedicite: Gloria", "to": "Daser Missa Ecce nunc Benedicite:  Kyrie", "weight": 1, "width": 1}, {"from": "Daser Missa Ecce nunc Benedicite: Gloria", "to": "Lasso Missa Ecce nunc benedicite: Sanctus", "weight": 1, "width": 1}, {"from": "Lasso Missa Ecce nunc benedicite: Sanctus", "to": "Lasso Missa Ecce nunc benedicite: Agnus", "weight": 1, "width": 1}, {"from": "Lasso Missa Ecce nunc benedicite: Sanctus", "to": "Lasso Missa Ecce nunc benedicite: Gloria", "weight": 1, "width": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"physics": {"enabled": true, "forceAtlas2Based": {"springLength": 1}, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 800;
+            height: 800;
+            background-color: black;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"font": {"color": "white"}, "group": 0, "id": "Ludwig Daser_Ecce nunc benedicite", "label": "Ludwig Daser_Ecce nunc benedicite", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 0, "id": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite:  Kyrie", "label": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite:  Kyrie", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 0, "id": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Gloria", "label": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Gloria", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 1, "id": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite:  Credo", "label": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite:  Credo", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 0, "id": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite:  Kyrie", "label": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite:  Kyrie", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 0, "id": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Gloria", "label": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Gloria", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 1, "id": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Credo", "label": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Credo", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 1, "id": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Sanctus", "label": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Sanctus", "shape": "dot", "size": 10}, {"font": {"color": "white"}, "group": 1, "id": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Sanctus", "label": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Sanctus", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "Ludwig Daser_Ecce nunc benedicite", "to": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite:  Kyrie", "weight": 48, "width": 48}, {"from": "Ludwig Daser_Ecce nunc benedicite", "to": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Gloria", "weight": 27, "width": 27}, {"from": "Ludwig Daser_Ecce nunc benedicite", "to": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite:  Credo", "weight": 15, "width": 15}, {"from": "Ludwig Daser_Ecce nunc benedicite", "to": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite:  Kyrie", "weight": 11, "width": 11}, {"from": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite:  Kyrie", "to": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Gloria", "weight": 23, "width": 23}, {"from": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite:  Kyrie", "to": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Gloria", "weight": 7, "width": 7}, {"from": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite:  Kyrie", "to": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite:  Kyrie", "weight": 4, "width": 4}, {"from": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Gloria", "to": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite:  Credo", "weight": 10, "width": 10}, {"from": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Gloria", "to": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Credo", "weight": 9, "width": 9}, {"from": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Gloria", "to": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite:  Kyrie", "weight": 6, "width": 6}, {"from": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Gloria", "to": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Gloria", "weight": 6, "width": 6}, {"from": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite:  Credo", "to": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Sanctus", "weight": 16, "width": 16}, {"from": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Sanctus", "to": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Credo", "weight": 6, "width": 6}, {"from": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Sanctus", "to": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Sanctus", "weight": 5, "width": 5}, {"from": "Orlandus Lassus_Lasso Missa Ecce nunc benedicite: Credo", "to": "Ludovi[cus] Daser_Daser Missa Ecce nunc Benedicite: Sanctus", "weight": 5, "width": 5}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"physics": {"enabled": true, "forceAtlas2Based": {"springLength": 1}, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
